@@ -1,0 +1,426 @@
+:: StoryTitle
+Lecture2_MCQ_Quiz
+
+
+:: StoryData
+{
+  "ifid": "11111111-1111-1111-1111-111111111111",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: F1 {"position":"275,25","size":"100,100"}
+<<set _corr to ['B', 'C']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q1sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q1sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: B. NADH, C. ATP
+
+ATP and NADH are immediate cellular energy carriers that can rapidly transfer chemical energy to metabolic reactions. ATP donates phosphoryl groups, whereas NADH delivers high-energy electrons to respiration. Glycogen and starch are storage polysaccharides that function as longer-term carbohydrate reserves rather than direct short-term carriers. This distinction is central to metabolic energy flow between storage, catabolism, and ATP-generating pathways.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q1B>>B. NADH; <</if>> <<if !$q1C>>C. ATP; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q1A>>A. Glycogen; <</if>> <<if $q1D>>D. Starch; <</if>><</if>>
+
+[[Continue->Q2]]
+
+
+:: F10 {"position":"25,275","size":"100,100"}
+<<set _corr to ['A']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q10sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q10sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 1>><<set $incorrectSelections += _wrong>>
+Model answer: A. Maintaining antioxidant and oxidative stress responses.
+
+NADPH provides reducing power for antioxidant systems, including maintenance of reduced glutathione during oxidative stress. It supports many biosynthetic reactions but does not directly power muscle contraction, generate the respiratory proton gradient, or assemble ribosomes. Production of NADPH through pathways such as the pentose phosphate pathway is vital for cellular redox balance.
+
+You correctly identified <<print _correctCount>> of 1 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q10A>>A. Maintaining antioxidant and oxidative stress responses.; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q10B>>B. Powering muscle contraction directly.; <</if>> <<if $q10C>>C. Building the proton gradient in the ETC.; <</if>> <<if $q10D>>D. Ribosome assembly.; <</if>><</if>>
+
+[[Continue->Summary]]
+
+
+:: F2 {"position":"525,25","size":"100,100"}
+<<set _corr to ['B', 'C']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q2sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q2sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: B. They release energy when they dissipate., C. Energy is required to build them.
+
+Electrochemical gradients store potential energy across membranes. Cells invest energy through electron transport chains or ion pumps to establish these gradients, and energy is released when ions flow down the gradient. They are not encoded in DNA and occur in many organisms, including bacteria, animals, and plants. Such gradients are essential for ATP synthesis and membrane transport processes.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q2B>>B. They release energy when they dissipate.; <</if>> <<if !$q2C>>C. Energy is required to build them.; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q2A>>A. They are stored in DNA.; <</if>> <<if $q2D>>D. They occur only in plant cells.; <</if>><</if>>
+
+[[Continue->Q3]]
+
+
+:: F3 {"position":"775,25","size":"100,100"}
+<<set _corr to ['B', 'C']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q3sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q3sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: B. NAD+ accepts electrons., C. NADH is formed.
+
+Reduction of NAD+ involves acceptance of electrons, commonly together with a hydrogen equivalent, producing NADH. NADH then serves as an electron carrier in catabolic metabolism. ATP is not produced directly by the reduction step, and carbon dioxide formation depends on specific metabolic reactions rather than NAD+ reduction itself. Redox coenzymes link substrate oxidation to cellular energy conservation.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q3B>>B. NAD+ accepts electrons.; <</if>> <<if !$q3C>>C. NADH is formed.; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q3A>>A. ATP is produced directly.; <</if>> <<if $q3D>>D. CO2 is produced.; <</if>><</if>>
+
+[[Continue->Q4]]
+
+
+:: F4 {"position":"1025,25","size":"100,100"}
+<<set _corr to ['B', 'C']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q4sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q4sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: B. 2 ATP (net), C. 2 NADH
+
+Glycolysis converts glucose to pyruvate in the cytoplasm, producing a net gain of two ATP and two NADH molecules per glucose. Carbon dioxide is not released during glycolysis and acetyl-CoA is generated later during pyruvate oxidation. Glycolysis provides both energy and metabolic intermediates, forming the first major stage of glucose catabolism in most cells.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q4B>>B. 2 ATP (net); <</if>> <<if !$q4C>>C. 2 NADH; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q4A>>A. 6 CO2; <</if>> <<if $q4D>>D. 2 Acetyl-CoA; <</if>><</if>>
+
+[[Continue->Q5]]
+
+
+:: F5 {"position":"25,150","size":"100,100"}
+<<set _corr to ['D']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q5sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q5sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 1>><<set $incorrectSelections += _wrong>>
+Model answer: D. Cytoplasm
+
+Glycolysis occurs in the cytoplasm, allowing cells to metabolise glucose without requiring mitochondrial enzymes. The inner mitochondrial membrane and matrix are important for oxidative phosphorylation and the TCA cycle respectively, while the nucleus is not involved in glycolytic reactions. Cytoplasmic glycolysis supplies ATP, NADH, and pyruvate for downstream metabolic pathways.
+
+You correctly identified <<print _correctCount>> of 1 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q5D>>D. Cytoplasm; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q5A>>A. Inner mitochondrial membrane; <</if>> <<if $q5B>>B. Nucleus; <</if>> <<if $q5C>>C. Mitochondrial matrix; <</if>><</if>>
+
+[[Continue->Q6]]
+
+
+:: F6 {"position":"275,150","size":"100,100"}
+<<set _corr to ['B', 'C']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q6sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q6sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: B. 2 Acetyl-CoA, C. 2 NADH
+
+Pyruvate oxidation converts pyruvate into acetyl-CoA before entry into the TCA cycle. Per glucose molecule, two acetyl-CoA and two NADH are produced, together with carbon dioxide. ATP is not generated directly in this step and glucose is the substrate of earlier pathways. The reaction connects glycolysis with mitochondrial aerobic metabolism.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q6B>>B. 2 Acetyl-CoA; <</if>> <<if !$q6C>>C. 2 NADH; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q6A>>A. 2 ATP; <</if>> <<if $q6D>>D. Glucose; <</if>><</if>>
+
+[[Continue->Q7]]
+
+
+:: F7 {"position":"525,150","size":"100,100"}
+<<set _corr to ['C', 'D']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q7sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q7sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: C. It supplies NADH to the ETC., D. It is also called the Krebs cycle.
+
+The TCA cycle, also known as the Krebs cycle, oxidises acetyl groups and generates reduced cofactors including NADH. These reducing equivalents donate electrons to the electron transport chain for ATP production. The cycle does not occur in the nucleus and does not directly generate glucose. It is a central hub for energy metabolism and biosynthetic precursor formation.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q7C>>C. It supplies NADH to the ETC.; <</if>> <<if !$q7D>>D. It is also called the Krebs cycle.; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q7A>>A. It generates glucose.; <</if>> <<if $q7B>>B. It occurs in the nucleus.; <</if>><</if>>
+
+[[Continue->Q8]]
+
+
+:: F8 {"position":"775,150","size":"100,100"}
+<<set _corr to ['B']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q8sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q8sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 1>><<set $incorrectSelections += _wrong>>
+Model answer: B. They are released as CO2.
+
+During complete aerobic oxidation, all six carbons originating from glucose are ultimately released as carbon dioxide. Carbon atoms do not become ATP or NADH molecules, and they do not remain permanently within the TCA cycle because cycle intermediates are regenerated. Carbon oxidation coupled to electron transfer underpins energy extraction during respiration.
+
+You correctly identified <<print _correctCount>> of 1 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q8B>>B. They are released as CO2.; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q8A>>A. They become ATP.; <</if>> <<if $q8C>>C. They remain permanently in the TCA cycle.; <</if>> <<if $q8D>>D. They are converted into NADH.; <</if>><</if>>
+
+[[Continue->Q9]]
+
+
+:: F9 {"position":"1025,150","size":"100,100"}
+<<set _corr to ['A', 'C']>>
+<<set _correctCount=0>><<set _missed=0>><<set _wrong=0>>
+<<for _a range _corr>><<if $q9sel.includes(_a)>><<set _correctCount +=1>><<else>><<set _missed +=1>><</if>><</for>>
+<<for _s range $q9sel>><<if !_corr.includes(_s)>><<set _wrong +=1>><</if>><</for>>
+<<set $totalCorrect += _correctCount>><<set $totalPossible += 2>><<set $incorrectSelections += _wrong>>
+Model answer: A. Ribose-5-phosphate, C. NADPH
+
+The pentose phosphate pathway generates ribose-5-phosphate for nucleotide synthesis and NADPH for reductive biosynthesis and antioxidant defence. ATP and FADH2 are not principal products of this pathway. By supplying reducing power and biosynthetic precursors, the pathway complements glycolysis and supports anabolic metabolism and cellular protection against oxidative damage.
+
+You correctly identified <<print _correctCount>> of 2 correct answers.
+You missed <<print _missed>> correct answers.
+You selected <<print _wrong>> incorrect answers.
+
+Missed correct answers: <<if _missed==0>>None<<else>><<if !$q9A>>A. Ribose-5-phosphate; <</if>> <<if !$q9C>>C. NADPH; <</if>><</if>>
+Incorrect selections: <<if _wrong==0>>None<<else>><<if $q9B>>B. ATP; <</if>> <<if $q9D>>D. FADH2; <</if>><</if>>
+
+[[Continue->Q10]]
+
+
+:: Q1 {"position":"150,25","size":"100,100"}
+Which cellular energy-storage molecules are best described as short-term energy carriers?
+
+Select all that apply.
+<<set $q1sel to []>>
+<<checkbox "$q1A" false true>> A. Glycogen
+<<checkbox "$q1B" false true>> B. NADH
+<<checkbox "$q1C" false true>> C. ATP
+<<checkbox "$q1D" false true>> D. Starch
+
+<<button "Submit">>
+<<set $q1sel to []>>
+<<if $q1A>><<run $q1sel.push("A")>><</if>>
+<<if $q1B>><<run $q1sel.push("B")>><</if>>
+<<if $q1C>><<run $q1sel.push("C")>><</if>>
+<<if $q1D>><<run $q1sel.push("D")>><</if>>
+<<goto "F1">>
+<</button>>
+
+
+:: Q10 {"position":"1150,150","size":"100,100"}
+NADPH is particularly important for:
+
+Select all that apply.
+<<set $q10sel to []>>
+<<checkbox "$q10A" false true>> A. Maintaining antioxidant and oxidative stress responses.
+<<checkbox "$q10B" false true>> B. Powering muscle contraction directly.
+<<checkbox "$q10C" false true>> C. Building the proton gradient in the ETC.
+<<checkbox "$q10D" false true>> D. Ribosome assembly.
+
+<<button "Submit">>
+<<set $q10sel to []>>
+<<if $q10A>><<run $q10sel.push("A")>><</if>>
+<<if $q10B>><<run $q10sel.push("B")>><</if>>
+<<if $q10C>><<run $q10sel.push("C")>><</if>>
+<<if $q10D>><<run $q10sel.push("D")>><</if>>
+<<goto "F10">>
+<</button>>
+
+
+:: Q2 {"position":"400,25","size":"100,100"}
+Which statements about electrochemical gradients are correct?
+
+Select all that apply.
+<<set $q2sel to []>>
+<<checkbox "$q2A" false true>> A. They are stored in DNA.
+<<checkbox "$q2B" false true>> B. They release energy when they dissipate.
+<<checkbox "$q2C" false true>> C. Energy is required to build them.
+<<checkbox "$q2D" false true>> D. They occur only in plant cells.
+
+<<button "Submit">>
+<<set $q2sel to []>>
+<<if $q2A>><<run $q2sel.push("A")>><</if>>
+<<if $q2B>><<run $q2sel.push("B")>><</if>>
+<<if $q2C>><<run $q2sel.push("C")>><</if>>
+<<if $q2D>><<run $q2sel.push("D")>><</if>>
+<<goto "F2">>
+<</button>>
+
+
+:: Q3 {"position":"650,25","size":"100,100"}
+During reduction of NAD+, what happens?
+
+Select all that apply.
+<<set $q3sel to []>>
+<<checkbox "$q3A" false true>> A. ATP is produced directly.
+<<checkbox "$q3B" false true>> B. NAD+ accepts electrons.
+<<checkbox "$q3C" false true>> C. NADH is formed.
+<<checkbox "$q3D" false true>> D. CO2 is produced.
+
+<<button "Submit">>
+<<set $q3sel to []>>
+<<if $q3A>><<run $q3sel.push("A")>><</if>>
+<<if $q3B>><<run $q3sel.push("B")>><</if>>
+<<if $q3C>><<run $q3sel.push("C")>><</if>>
+<<if $q3D>><<run $q3sel.push("D")>><</if>>
+<<goto "F3">>
+<</button>>
+
+
+:: Q4 {"position":"900,25","size":"100,100"}
+Which are products of glycolysis per glucose molecule?
+
+Select all that apply.
+<<set $q4sel to []>>
+<<checkbox "$q4A" false true>> A. 6 CO2
+<<checkbox "$q4B" false true>> B. 2 ATP (net)
+<<checkbox "$q4C" false true>> C. 2 NADH
+<<checkbox "$q4D" false true>> D. 2 Acetyl-CoA
+
+<<button "Submit">>
+<<set $q4sel to []>>
+<<if $q4A>><<run $q4sel.push("A")>><</if>>
+<<if $q4B>><<run $q4sel.push("B")>><</if>>
+<<if $q4C>><<run $q4sel.push("C")>><</if>>
+<<if $q4D>><<run $q4sel.push("D")>><</if>>
+<<goto "F4">>
+<</button>>
+
+
+:: Q5 {"position":"1150,25","size":"100,100"}
+Where does glycolysis occur?
+
+Select all that apply.
+<<set $q5sel to []>>
+<<checkbox "$q5A" false true>> A. Inner mitochondrial membrane
+<<checkbox "$q5B" false true>> B. Nucleus
+<<checkbox "$q5C" false true>> C. Mitochondrial matrix
+<<checkbox "$q5D" false true>> D. Cytoplasm
+
+<<button "Submit">>
+<<set $q5sel to []>>
+<<if $q5A>><<run $q5sel.push("A")>><</if>>
+<<if $q5B>><<run $q5sel.push("B")>><</if>>
+<<if $q5C>><<run $q5sel.push("C")>><</if>>
+<<if $q5D>><<run $q5sel.push("D")>><</if>>
+<<goto "F5">>
+<</button>>
+
+
+:: Q6 {"position":"150,150","size":"100,100"}
+Which are products of pyruvate oxidation (per glucose)?
+
+Select all that apply.
+<<set $q6sel to []>>
+<<checkbox "$q6A" false true>> A. 2 ATP
+<<checkbox "$q6B" false true>> B. 2 Acetyl-CoA
+<<checkbox "$q6C" false true>> C. 2 NADH
+<<checkbox "$q6D" false true>> D. Glucose
+
+<<button "Submit">>
+<<set $q6sel to []>>
+<<if $q6A>><<run $q6sel.push("A")>><</if>>
+<<if $q6B>><<run $q6sel.push("B")>><</if>>
+<<if $q6C>><<run $q6sel.push("C")>><</if>>
+<<if $q6D>><<run $q6sel.push("D")>><</if>>
+<<goto "F6">>
+<</button>>
+
+
+:: Q7 {"position":"400,150","size":"100,100"}
+Which statements about the TCA cycle are correct?
+
+Select all that apply.
+<<set $q7sel to []>>
+<<checkbox "$q7A" false true>> A. It generates glucose.
+<<checkbox "$q7B" false true>> B. It occurs in the nucleus.
+<<checkbox "$q7C" false true>> C. It supplies NADH to the ETC.
+<<checkbox "$q7D" false true>> D. It is also called the Krebs cycle.
+
+<<button "Submit">>
+<<set $q7sel to []>>
+<<if $q7A>><<run $q7sel.push("A")>><</if>>
+<<if $q7B>><<run $q7sel.push("B")>><</if>>
+<<if $q7C>><<run $q7sel.push("C")>><</if>>
+<<if $q7D>><<run $q7sel.push("D")>><</if>>
+<<goto "F7">>
+<</button>>
+
+
+:: Q8 {"position":"650,150","size":"100,100"}
+What ultimately happens to the six carbons of glucose during complete oxidation?
+
+Select all that apply.
+<<set $q8sel to []>>
+<<checkbox "$q8A" false true>> A. They become ATP.
+<<checkbox "$q8B" false true>> B. They are released as CO2.
+<<checkbox "$q8C" false true>> C. They remain permanently in the TCA cycle.
+<<checkbox "$q8D" false true>> D. They are converted into NADH.
+
+<<button "Submit">>
+<<set $q8sel to []>>
+<<if $q8A>><<run $q8sel.push("A")>><</if>>
+<<if $q8B>><<run $q8sel.push("B")>><</if>>
+<<if $q8C>><<run $q8sel.push("C")>><</if>>
+<<if $q8D>><<run $q8sel.push("D")>><</if>>
+<<goto "F8">>
+<</button>>
+
+
+:: Q9 {"position":"900,150","size":"100,100"}
+Which compounds are produced by the pentose phosphate pathway?
+
+Select all that apply.
+<<set $q9sel to []>>
+<<checkbox "$q9A" false true>> A. Ribose-5-phosphate
+<<checkbox "$q9B" false true>> B. ATP
+<<checkbox "$q9C" false true>> C. NADPH
+<<checkbox "$q9D" false true>> D. FADH2
+
+<<button "Submit">>
+<<set $q9sel to []>>
+<<if $q9A>><<run $q9sel.push("A")>><</if>>
+<<if $q9B>><<run $q9sel.push("B")>><</if>>
+<<if $q9C>><<run $q9sel.push("C")>><</if>>
+<<if $q9D>><<run $q9sel.push("D")>><</if>>
+<<goto "F9">>
+<</button>>
+
+
+:: Start {"position":"25,25","size":"100,100"}
+<<set $totalCorrect=0>><<set $totalPossible=0>><<set $incorrectSelections=0>><<set $adjusted=0>>
+Welcome. This quiz uses select-all-that-apply questions. [[Begin->Q1]]
+
+
+:: Summary {"position":"150,275","size":"100,100"}
+<<set $adjusted to Math.max(0,$totalCorrect-(0.5*$incorrectSelections))>>
+<<set _pct to Math.round(($adjusted/$totalPossible)*1000)/10>>
+Total correctly identified answers: <<print $totalCorrect>>
+Total possible correct answers: <<print $totalPossible>>
+Penalty-adjusted marks: <<print $adjusted>>
+Overall percentage: <<print _pct>>%
