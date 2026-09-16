@@ -1,0 +1,1131 @@
+:: StoryTitle
+Lipid Naming Practice
+
+:: StoryData
+{
+  "ifid": "9952178b-7fd8-415e-9f35-abec83c1aa8d",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "zoom": 1
+}
+
+:: StoryInit
+<<script>>
+  var style = document.createElement('style');
+  style.innerHTML = `
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * {
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    #ui-bar {
+      display: none !important;
+    }
+
+    #story {
+      margin-left: 0 !important;
+    }
+
+    body {
+      background-color: #f4f6fb !important;
+      color: #1a1a2e !important;
+    }
+
+    #passages {
+      max-width: 820px !important;
+      margin: 0 auto !important;
+      padding: 30px 40px !important;
+    }
+
+    .passage {
+      font-size: 1.05em !important;
+      line-height: 1.8 !important;
+    }
+
+    h1 {
+      font-size: 1.8em !important;
+      font-weight: 700 !important;
+      color: #1a1a2e !important;
+      border-bottom: 3px solid #4a90d9 !important;
+      padding-bottom: 8px !important;
+      margin-bottom: 20px !important;
+    }
+
+    h2 {
+      font-size: 1.3em !important;
+      font-weight: 600 !important;
+      color: #2c3e6b !important;
+    }
+
+    a {
+      display: inline-block !important;
+      margin: 6px 4px !important;
+      padding: 8px 18px !important;
+      background-color: #4a90d9 !important;
+      color: white !important;
+      border-radius: 6px !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      transition: background-color 0.2s ease !important;
+    }
+
+    a:hover {
+      background-color: #2c6fad !important;
+    }
+
+    .lipid-image {
+      display: block !important;
+      max-width: 100% !important;
+      margin: 24px auto !important;
+      border: 1px solid #d0d7e3 !important;
+      border-radius: 10px !important;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08) !important;
+    }
+
+    .correct {
+      color: #1a5c2a !important;
+      font-weight: 600 !important;
+      background: #eafaf0 !important;
+      padding: 14px 16px !important;
+      border-radius: 8px !important;
+      border-left: 5px solid #2ecc71 !important;
+      margin: 12px 0 !important;
+    }
+
+    .feedback-wrong {
+      color: #7b1a1a !important;
+      font-weight: 600 !important;
+      background: #fdf0f0 !important;
+      padding: 14px 16px !important;
+      border-radius: 8px !important;
+      border-left: 5px solid #e74c3c !important;
+      margin: 12px 0 !important;
+    }
+
+    .hint-box {
+      background: #fffbea !important;
+      border-left: 5px solid #f1c40f !important;
+      padding: 14px 16px !important;
+      border-radius: 8px !important;
+      margin-top: 12px !important;
+    }
+
+    .score-box {
+      background: #eef3fc !important;
+      border-left: 5px solid #4a90d9 !important;
+      padding: 14px 16px !important;
+      border-radius: 8px !important;
+      font-size: 1.1em !important;
+      font-weight: 600 !important;
+      margin: 16px 0 !important;
+    }
+
+    .step-label {
+      font-size: 0.78em !important;
+      color: #7a8aaa !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      font-weight: 600 !important;
+      margin-bottom: 4px !important;
+    }
+
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin: 16px 0 !important;
+    }
+
+    th {
+      background-color: #4a90d9 !important;
+      color: white !important;
+      padding: 10px 14px !important;
+      text-align: left !important;
+    }
+
+    td {
+      padding: 9px 14px !important;
+      border-bottom: 1px solid #d0d7e3 !important;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0f4fb !important;
+    }
+  `;
+  document.head.appendChild(style);
+<</script>>
+<<set $score to 0>>
+<<set $hintsUsed to 0>>
+<<set $q1_backbone to "">>
+<<set $q1_headgroup to "">>
+<<set $q1_sn1 to "">>
+<<set $q1_sn2 to "">>
+<<set $q2_backbone to "">>
+<<set $q2_headgroup to "">>
+<<set $q2_sn1 to "">>
+<<set $q2_sn2 to "">>
+<<set $q3_backbone to "">>
+<<set $q3_headgroup to "">>
+<<set $q3_sn1 to "">>
+<<set $q3_sn2 to "">>
+<<set $q4_backbone to "">>
+<<set $q4_headgroup to "">>
+<<set $q4_sn1 to "">>
+<<set $q4_sn2 to "">>
+<<set $q5_backbone to "">>
+<<set $q5_headgroup to "">>
+<<set $q5_chain to "">>
+<<set $q6_sn1 to "">>
+<<set $q6_sn2 to "">>
+<<set $q6_sn3 to "">>
+
+:: Start
+# Lipid Naming Practice
+
+Welcome! In this exercise you will be shown **six lipid structures** and asked to identify and name them using standard shorthand notation.
+
+For each lipid, you will work through the structure **step by step**:
+1. Identify the backbone
+2. Identify the headgroup (where applicable)
+3. Identify each fatty acid chain
+
+The expected answer format is as per your lectures, for example: **PC(16:0/18:1(9Z))**
+
+<div class="score-box">Your current score: <<print $score>> / 6</div>
+
+---
+
+[[Begin|Question 1]]
+
+:: Question 1
+<div class="step-label">Question 1 of 6</div>
+
+## Identify this lipid
+
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+
+//A glycerophospholipid with a glycerol backbone, a phosphate-linked headgroup, a saturated 16-carbon fatty acid at sn-1, and a monounsaturated 18-carbon fatty acid at sn-2 with a double bond at carbon 9 in the cis configuration.//
+
+---
+
+**Step 1: What is the backbone?**
+
+[[A single fatty acid|Q1_Backbone_Wrong_FA]]
+[[Glycerol|Q1_Backbone_Correct]]
+[[Sphingosine|Q1_Backbone_Wrong_Sphingosine]]
+
+:: Q1_Backbone_Wrong_Sphingosine
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Sphingosine is the backbone of sphingolipids — it contains a long-chain amino alcohol. Look again at the structure: there are three carbons with hydroxyl/ester linkages and no nitrogen on the backbone itself.</div>
+
+[[Try again|Question 1]]
+
+:: Q1_Backbone_Wrong_FA
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. A single fatty acid would just be a carboxylic acid chain. This structure has a three-carbon backbone with multiple ester linkages.</div>
+
+[[Try again|Question 1]]
+
+:: Q1_Backbone_Correct
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<<set $q1_backbone to "correct">>
+<div class="correct">✔ Correct! This is a glycerol backbone — the hallmark of glycerophospholipids and triacylglycerols.</div>
+
+---
+
+**Step 2: What is the headgroup attached to the phosphate?**
+
+[[Choline|Q1_Headgroup_Correct]]
+[[Ethanolamine|Q1_Headgroup_Wrong_PE]]
+[[Inositol|Q1_Headgroup_Wrong_PI]]
+[[Serine|Q1_Headgroup_Wrong_PS]]
+
+:: Q1_Headgroup_Wrong_PE
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Ethanolamine is HO-CH₂-CH₂-NH₂ — it lacks the three methyl groups on the nitrogen. Look at the headgroup: does the nitrogen carry methyl groups?</div>
+
+[[Try again|Q1_Backbone_Correct]]
+
+:: Q1_Headgroup_Wrong_PS
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Serine carries an amino group AND a carboxyl group. The headgroup here is simpler than that.</div>
+
+[[Try again|Q1_Backbone_Correct]]
+
+:: Q1_Headgroup_Wrong_PI
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Inositol is a six-carbon ring with multiple hydroxyl groups — quite distinctive. The headgroup here is a small linear molecule.</div>
+
+[[Try again|Q1_Backbone_Correct]]
+
+:: Q1_Headgroup_Correct
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<<set $q1_headgroup to "correct">>
+<div class="correct">✔ Correct! The headgroup is choline — (CH₃)₃N⁺-CH₂-CH₂-OH. This makes it a <strong>phosphatidylcholine (PC)</strong>.</div>
+
+---
+
+**Step 3: What is the fatty acid at sn-1?**
+
+[[14:0 (Myristic acid)|Q1_SN1_Wrong_14]]
+[[16:0 (Palmitic acid)|Q1_SN1_Correct]]
+[[18:0 (Stearic acid)|Q1_SN1_Wrong_18]]
+[[18:1(9Z) (Oleic acid)|Q1_SN1_Wrong_Oleic]]
+
+:: Q1_SN1_Wrong_18
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-1 chain carefully — including the carbonyl carbon. Stearic acid has 18 carbons; this chain is shorter.</div>
+
+[[Try again|Q1_Headgroup_Correct]]
+
+:: Q1_SN1_Wrong_Oleic
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Oleic acid is 18 carbons and unsaturated. The sn-1 chain here is fully saturated — no double bonds — and has 16 carbons.</div>
+
+[[Try again|Q1_Headgroup_Correct]]
+
+:: Q1_SN1_Wrong_14
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Myristic acid has 14 carbons. Count again carefully from the carbonyl carbon.</div>
+
+[[Try again|Q1_Headgroup_Correct]]
+
+:: Q1_SN1_Correct
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<<set $q1_sn1 to "correct">>
+<div class="correct">✔ Correct! The sn-1 fatty acid is <strong>palmitic acid — 16:0</strong>. Sixteen carbons, fully saturated.</div>
+
+---
+
+**Step 4: What is the fatty acid at sn-2?**
+
+[[16:1(9Z) (Palmitoleic acid)|Q1_SN2_Wrong_16]]
+[[18:0 (Stearic acid)|Q1_SN2_Wrong_Sat]]
+[[18:1(9E) (Elaidic acid)|Q1_SN2_Wrong_Trans]]
+[[18:1(9Z) (Oleic acid)|Q1_SN2_Correct]]
+
+:: Q1_SN2_Wrong_Trans
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Close — the carbon count and double bond position are right, but check the geometry. A <em>cis</em> double bond causes a pronounced kink in the chain. A <em>trans</em> double bond (9E) keeps the chain relatively straight. Which does this structure show?</div>
+
+[[Try again|Q1_SN1_Correct]]
+
+:: Q1_SN2_Wrong_Sat
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Look carefully at the sn-2 chain — there is a double bond present. A fully saturated chain would have no double bonds and would be written as 18:0.</div>
+
+[[Try again|Q1_SN1_Correct]]
+
+:: Q1_SN2_Wrong_16
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-2 chain again — including the carbonyl carbon. This chain has 18 carbons, not 16.</div>
+
+[[Try again|Q1_SN1_Correct]]
+
+:: Q1_SN2_Correct
+<div class="step-label">Question 1 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/yjRDld.png" alt="Lipid structure Q1">
+<<set $q1_sn2 to "correct">>
+<<set $score to $score + 1>>
+<div class="correct">✔ Correct! The sn-2 fatty acid is <strong>oleic acid — 18:1(9Z)</strong>. The double bond is between carbons 9 and 10, in the <em>cis</em> (Z) configuration.</div>
+
+---
+
+## ✅ Full name: PC(16:0/18:1(9Z))
+
+This is **POPC** — 1-palmitoyl-2-oleoyl-sn-glycero-3-phosphocholine. One of the most abundant phospholipids in mammalian cell membranes.
+
+<div class="score-box">Score so far: <<print $score>> / 6</div>
+
+[[Continue|Question 2]]
+
+:: Question 2
+<div class="step-label">Question 2 of 6</div>
+
+## Identify this lipid
+
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+
+//A glycerophospholipid with a glycerol backbone, a phosphate-linked headgroup, a saturated 18-carbon fatty acid at sn-1, and a polyunsaturated 18-carbon fatty acid at sn-2 with two double bonds.//
+
+---
+
+**Step 1: What is the backbone?**
+
+[[A single fatty acid|Q2_Backbone_Wrong_FA]]
+[[Glycerol|Q2_Backbone_Correct]]
+[[Sphingosine|Q2_Backbone_Wrong_Sphingosine]]
+
+:: Q2_Backbone_Wrong_Sphingosine
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Look again — the backbone here has the same three-carbon glycerol structure you saw in Q1, with ester-linked fatty acids.</div>
+
+[[Try again|Question 2]]
+
+:: Q2_Backbone_Wrong_FA
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. This structure has a three-carbon backbone with two fatty acid chains and a phosphate group attached.</div>
+
+[[Try again|Question 2]]
+
+:: Q2_Backbone_Correct
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<<set $q2_backbone to "correct">>
+<div class="correct">✔ Correct! Glycerol backbone — another glycerophospholipid.</div>
+
+---
+
+**Step 2: What is the headgroup?**
+
+[[Choline|Q2_Headgroup_Wrong_PC]]
+[[Ethanolamine|Q2_Headgroup_Correct]]
+[[Inositol|Q2_Headgroup_Wrong_PI]]
+[[Serine|Q2_Headgroup_Wrong_PS]]
+
+:: Q2_Headgroup_Wrong_PC
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Choline has a quaternary nitrogen — (CH₃)₃N⁺ — carrying three methyl groups. The headgroup here has a primary amine (NH₂) with no methyl groups. This is a common and important distinction!</div>
+
+[[Try again|Q2_Backbone_Correct]]
+
+:: Q2_Headgroup_Wrong_PS
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Serine has both an amino group and a carboxyl group. The headgroup here only has an amino group — simpler than serine.</div>
+
+[[Try again|Q2_Backbone_Correct]]
+
+:: Q2_Headgroup_Wrong_PI
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Inositol is a bulky six-membered ring with multiple -OH groups. The headgroup here is a small two-carbon molecule.</div>
+
+[[Try again|Q2_Backbone_Correct]]
+
+:: Q2_Headgroup_Correct
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<<set $q2_headgroup to "correct">>
+<div class="correct">✔ Correct! The headgroup is ethanolamine — HO-CH₂-CH₂-NH₂. This makes it a <strong>phosphatidylethanolamine (PE)</strong>. Note the primary amine, versus the trimethylated nitrogen of choline in PC.</div>
+
+---
+
+**Step 3: What is the fatty acid at sn-1?**
+
+[[16:0 (Palmitic acid)|Q2_SN1_Wrong_16]]
+[[18:0 (Stearic acid)|Q2_SN1_Correct]]
+[[18:1(9Z) (Oleic acid)|Q2_SN1_Wrong_Oleic]]
+[[20:0 (Arachidic acid)|Q2_SN1_Wrong_20]]
+
+:: Q2_SN1_Wrong_16
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Palmitic acid has 16 carbons. Count the carbons in the sn-1 chain again — this one is longer.</div>
+
+[[Try again|Q2_Headgroup_Correct]]
+
+:: Q2_SN1_Wrong_Oleic
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. The sn-1 chain here is fully saturated — no double bonds. Oleic acid (18:1) has a double bond at carbon 9.</div>
+
+[[Try again|Q2_Headgroup_Correct]]
+
+:: Q2_SN1_Wrong_20
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Arachidic acid has 20 carbons. Count again — this chain has 18.</div>
+
+[[Try again|Q2_Headgroup_Correct]]
+
+:: Q2_SN1_Correct
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<<set $q2_sn1 to "correct">>
+<div class="correct">✔ Correct! The sn-1 fatty acid is <strong>stearic acid — 18:0</strong>. Eighteen carbons, fully saturated.</div>
+
+---
+
+**Step 4: What is the fatty acid at sn-2?**
+
+[[18:1(9Z) (Oleic acid)|Q2_SN2_Wrong_1DB]]
+[[18:2(9Z,12Z) (Linoleic acid)|Q2_SN2_Correct]]
+[[18:3(9Z,12Z,15Z) (α-Linolenic acid)|Q2_SN2_Wrong_3DB]]
+[[20:4(5Z,8Z,11Z,14Z) (Arachidonic acid)|Q2_SN2_Wrong_AA]]
+
+:: Q2_SN2_Wrong_3DB
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. α-Linolenic acid has <em>three</em> double bonds. Count the double bonds in the sn-2 chain carefully — there are two.</div>
+
+[[Try again|Q2_SN1_Correct]]
+
+:: Q2_SN2_Wrong_1DB
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Oleic acid has only one double bond. Look at the sn-2 chain again — how many double bonds can you see?</div>
+
+[[Try again|Q2_SN1_Correct]]
+
+:: Q2_SN2_Wrong_AA
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<div class="feedback-wrong">❌ Not quite. Arachidonic acid has 20 carbons and four double bonds. The sn-2 chain here has 18 carbons and two double bonds.</div>
+
+[[Try again|Q2_SN1_Correct]]
+
+:: Q2_SN2_Correct
+<div class="step-label">Question 2 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/qKojPj.png" alt="Lipid structure Q2">
+<<set $q2_sn2 to "correct">>
+<<set $score to $score + 1>>
+<div class="correct">✔ Correct! The sn-2 fatty acid is <strong>linoleic acid — 18:2(9Z,12Z)</strong>. An essential omega-6 fatty acid.</div>
+
+---
+
+## ✅ Full name: PE(18:0/18:2(9Z,12Z))
+
+A common phosphatidylethanolamine found in mammalian membranes. PE headgroups are smaller than PC, giving the lipid a more conical shape — important for membrane curvature.
+
+<div class="score-box">Score so far: <<print $score>> / 6</div>
+
+[[Continue|Question 3]]
+
+:: Question 3
+<div class="step-label">Question 3 of 6</div>
+
+## Identify this lipid
+
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+
+//A glycerophospholipid with a glycerol backbone, a phosphate-linked headgroup, a saturated 18-carbon fatty acid at sn-1, and a polyunsaturated 20-carbon fatty acid at sn-2 with four double bonds.//
+
+---
+
+**Step 1: What is the backbone?**
+
+[[A single fatty acid|Q3_Backbone_Wrong_FA]]
+[[Glycerol|Q3_Backbone_Correct]]
+[[Sphingosine|Q3_Backbone_Wrong_Sphingosine]]
+
+:: Q3_Backbone_Wrong_Sphingosine
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. The backbone here is the same glycerol structure as Q1 and Q2.</div>
+
+[[Try again|Question 3]]
+
+:: Q3_Backbone_Wrong_FA
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. This structure has a three-carbon glycerol backbone with two ester-linked fatty acids and a phosphate group.</div>
+
+[[Try again|Question 3]]
+
+:: Q3_Backbone_Correct
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<<set $q3_backbone to "correct">>
+<div class="correct">✔ Correct! Glycerol backbone again.</div>
+
+---
+
+**Step 2: What is the headgroup?**
+
+[[Choline|Q3_Headgroup_Wrong_PC]]
+[[Ethanolamine|Q3_Headgroup_Wrong_PE]]
+[[Inositol|Q3_Headgroup_Wrong_PI]]
+[[Serine|Q3_Headgroup_Correct]]
+
+:: Q3_Headgroup_Wrong_PC
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Choline has a trimethylated nitrogen — (CH₃)₃N⁺. The headgroup here has both an amino group and a carboxyl group.</div>
+
+[[Try again|Q3_Backbone_Correct]]
+
+:: Q3_Headgroup_Wrong_PE
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Ethanolamine is HO-CH₂-CH₂-NH₂ — just an amino group. The headgroup here also carries a carboxyl group, making it an amino acid.</div>
+
+[[Try again|Q3_Backbone_Correct]]
+
+:: Q3_Headgroup_Wrong_PI
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Inositol is a six-membered ring. The headgroup here is a small amino acid.</div>
+
+[[Try again|Q3_Backbone_Correct]]
+
+:: Q3_Headgroup_Correct
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<<set $q3_headgroup to "correct">>
+<div class="correct">✔ Correct! The headgroup is serine — an amino acid with both -NH₂ and -COOH groups. This makes it a <strong>phosphatidylserine (PS)</strong>. PS is notably enriched on the inner leaflet of the plasma membrane and is externalised as an apoptotic signal.</div>
+
+---
+
+**Step 3: What is the fatty acid at sn-1?**
+
+[[16:0 (Palmitic acid)|Q3_SN1_Wrong_16]]
+[[18:0 (Stearic acid)|Q3_SN1_Correct]]
+[[18:1(9Z) (Oleic acid)|Q3_SN1_Wrong_Oleic]]
+[[20:0 (Arachidic acid)|Q3_SN1_Wrong_20]]
+
+:: Q3_SN1_Wrong_16
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-1 chain again — this chain has 18 carbons, not 16.</div>
+
+[[Try again|Q3_Headgroup_Correct]]
+
+:: Q3_SN1_Wrong_Oleic
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. The sn-1 chain here is fully saturated. Oleic acid has a double bond at C9.</div>
+
+[[Try again|Q3_Headgroup_Correct]]
+
+:: Q3_SN1_Wrong_20
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Count the carbons again — this chain has 18 carbons, not 20.</div>
+
+[[Try again|Q3_Headgroup_Correct]]
+
+:: Q3_SN1_Correct
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<<set $q3_sn1 to "correct">>
+<div class="correct">✔ Correct! The sn-1 fatty acid is <strong>stearic acid — 18:0</strong>.</div>
+
+---
+
+**Step 4: What is the fatty acid at sn-2?**
+
+[[18:4(6Z,9Z,12Z,15Z)|Q3_SN2_Wrong_18]]
+[[20:3(8Z,11Z,14Z)|Q3_SN2_Wrong_20_3]]
+[[20:4(5E,8E,11E,14E)|Q3_SN2_Wrong_Trans]]
+[[20:4(5Z,8Z,11Z,14Z) (Arachidonic acid)|Q3_SN2_Correct]]
+
+:: Q3_SN2_Wrong_Trans
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Close — the carbon count and number of double bonds are right, but check the geometry. All four double bonds in arachidonic acid are in the <em>cis</em> (Z) configuration.</div>
+
+[[Try again|Q3_SN1_Correct]]
+
+:: Q3_SN2_Wrong_18
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-2 chain — there are 20, not 18.</div>
+
+[[Try again|Q3_SN1_Correct]]
+
+:: Q3_SN2_Wrong_20_3
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<div class="feedback-wrong">❌ Not quite. Count the double bonds again — there are four in this chain, not three.</div>
+
+[[Try again|Q3_SN1_Correct]]
+
+:: Q3_SN2_Correct
+<div class="step-label">Question 3 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/8KrBV0.png" alt="Lipid structure Q3">
+<<set $q3_sn2 to "correct">>
+<<set $score to $score + 1>>
+<div class="correct">✔ Correct! The sn-2 fatty acid is <strong>arachidonic acid — 20:4(5Z,8Z,11Z,14Z)</strong>. An omega-6 PUFA and precursor to eicosanoids (prostaglandins, leukotrienes, thromboxanes).</div>
+
+---
+
+## ✅ Full name: PS(18:0/20:4(5Z,8Z,11Z,14Z))
+
+A biologically important PS species — arachidonic acid at sn-2 is a common feature of signalling lipids.
+
+<div class="score-box">Score so far: <<print $score>> / 6</div>
+
+[[Continue|Question 4]]
+
+:: Question 4
+<div class="step-label">Question 4 of 6</div>
+
+## Identify this lipid
+
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+
+//A glycerophospholipid with a glycerol backbone, a phosphate-linked headgroup consisting of a six-membered ring with multiple hydroxyl groups, a saturated 18-carbon fatty acid at sn-1, and a polyunsaturated 18-carbon fatty acid at sn-2 with three double bonds.//
+
+---
+
+**Step 1: What is the backbone?**
+
+[[A single fatty acid|Q4_Backbone_Wrong_FA]]
+[[Glycerol|Q4_Backbone_Correct]]
+[[Sphingosine|Q4_Backbone_Wrong_Sphingosine]]
+
+:: Q4_Backbone_Wrong_Sphingosine
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. The backbone is the same three-carbon glycerol as in Q1–Q3.</div>
+
+[[Try again|Question 4]]
+
+:: Q4_Backbone_Wrong_FA
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. This structure has a glycerol backbone with two fatty acid chains and a phosphate-linked headgroup.</div>
+
+[[Try again|Question 4]]
+
+:: Q4_Backbone_Correct
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<<set $q4_backbone to "correct">>
+<div class="correct">✔ Correct! Glycerol backbone.</div>
+
+---
+
+**Step 2: What is the headgroup?**
+
+[[Choline|Q4_Headgroup_Wrong_PC]]
+[[Ethanolamine|Q4_Headgroup_Wrong_PE]]
+[[Inositol|Q4_Headgroup_Correct]]
+[[Serine|Q4_Headgroup_Wrong_PS]]
+
+:: Q4_Headgroup_Wrong_PC
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Choline is a small linear molecule with a trimethylated nitrogen. The headgroup here is a bulky six-membered ring — quite distinctive.</div>
+
+[[Try again|Q4_Backbone_Correct]]
+
+:: Q4_Headgroup_Wrong_PE
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Ethanolamine is a small two-carbon molecule. The headgroup here is a six-membered cyclohexane ring with multiple hydroxyl groups.</div>
+
+[[Try again|Q4_Backbone_Correct]]
+
+:: Q4_Headgroup_Wrong_PS
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Serine is a small amino acid. The headgroup here is inositol — a six-membered ring with six hydroxyl groups, one on each carbon.</div>
+
+[[Try again|Q4_Backbone_Correct]]
+
+:: Q4_Headgroup_Correct
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<<set $q4_headgroup to "correct">>
+<div class="correct">✔ Correct! The headgroup is <strong>inositol</strong> — a cyclohexane ring with six -OH groups. This makes it a <strong>phosphatidylinositol (PI)</strong>. PI and its phosphorylated derivatives (PIPs) are critical signalling lipids.</div>
+
+---
+
+**Step 3: What is the fatty acid at sn-1?**
+
+[[16:0 (Palmitic acid)|Q4_SN1_Wrong_16]]
+[[18:0 (Stearic acid)|Q4_SN1_Correct]]
+[[18:1(9Z) (Oleic acid)|Q4_SN1_Wrong_Oleic]]
+[[20:0 (Arachidic acid)|Q4_SN1_Wrong_20]]
+
+:: Q4_SN1_Wrong_16
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-1 chain — there are 18, not 16.</div>
+
+[[Try again|Q4_Headgroup_Correct]]
+
+:: Q4_SN1_Wrong_Oleic
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. The sn-1 chain is fully saturated here — no double bonds.</div>
+
+[[Try again|Q4_Headgroup_Correct]]
+
+:: Q4_SN1_Wrong_20
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Count again — 18 carbons, not 20.</div>
+
+[[Try again|Q4_Headgroup_Correct]]
+
+:: Q4_SN1_Correct
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<<set $q4_sn1 to "correct">>
+<div class="correct">✔ Correct! The sn-1 fatty acid is <strong>stearic acid — 18:0</strong>.</div>
+
+---
+
+**Step 4: What is the fatty acid at sn-2?**
+
+[[18:2(9Z,12Z) (Linoleic acid)|Q4_SN2_Wrong_2DB]]
+[[18:3(6Z,9Z,12Z) (γ-Linolenic acid)|Q4_SN2_Wrong_GLA]]
+[[18:3(9Z,12Z,15Z) (α-Linolenic acid)|Q4_SN2_Correct]]
+[[20:3(8Z,11Z,14Z)|Q4_SN2_Wrong_20]]
+
+:: Q4_SN2_Wrong_2DB
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Linoleic acid has two double bonds. Count the double bonds in the sn-2 chain again — there are three.</div>
+
+[[Try again|Q4_SN1_Correct]]
+
+:: Q4_SN2_Wrong_GLA
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Close! γ-Linolenic acid (GLA) also has three double bonds on an 18-carbon chain, but the positions differ — GLA has double bonds at 6, 9, and 12. Check the positions of the double bonds in this chain.</div>
+
+[[Try again|Q4_SN1_Correct]]
+
+:: Q4_SN2_Wrong_20
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-2 chain — there are 18, not 20.</div>
+
+[[Try again|Q4_SN1_Correct]]
+
+:: Q4_SN2_Correct
+<div class="step-label">Question 4 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/zV9yA9.png" alt="Lipid structure Q4">
+<<set $q4_sn2 to "correct">>
+<<set $score to $score + 1>>
+<div class="correct">✔ Correct! The sn-2 fatty acid is <strong>α-linolenic acid — 18:3(9Z,12Z,15Z)</strong>. An essential omega-3 fatty acid and precursor to EPA and DHA.</div>
+
+---
+
+## ✅ Full name: PI(18:0/18:3(9Z,12Z,15Z))
+
+Phosphatidylinositols are found in the inner leaflet of the plasma membrane and are precursors to important signalling molecules including PIP₂ and IP₃.
+
+<div class="score-box">Score so far: <<print $score>> / 6</div>
+
+[[Continue|Question 5]]
+
+:: Question 5
+<div class="step-label">Question 5 of 6</div>
+
+## Identify this lipid
+
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+
+//A sphingolipid with a sphingosine backbone, a phosphocholine headgroup, and a saturated 16-carbon fatty acid chain linked via an amide bond.//
+
+---
+
+**Step 1: What is the backbone?**
+
+[[A single fatty acid|Q5_Backbone_Wrong_FA]]
+[[Glycerol|Q5_Backbone_Wrong_Glycerol]]
+[[Sphingosine|Q5_Backbone_Correct]]
+
+:: Q5_Backbone_Wrong_Glycerol
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. Look carefully at the backbone. Unlike the glycerophospholipids in Q1–Q4, this backbone is a long-chain amino alcohol — it contains a nitrogen atom and a long hydrocarbon chain as part of the backbone itself. This is sphingosine.</div>
+
+[[Try again|Question 5]]
+
+:: Q5_Backbone_Wrong_FA
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. The backbone here is sphingosine — a long-chain amino alcohol (18 carbons, one double bond, an amino group and two hydroxyl groups).</div>
+
+[[Try again|Question 5]]
+
+:: Q5_Backbone_Correct
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<<set $q5_backbone to "correct">>
+<div class="correct">✔ Correct! This is a <strong>sphingosine backbone</strong> — the hallmark of sphingolipids. Note the long-chain amino alcohol: 18 carbons, a trans double bond at C4, an amino group at C2, and hydroxyl groups at C1 and C3. This is denoted <strong>d18:1</strong> (dihydroxy, 18 carbons, 1 double bond).</div>
+
+---
+
+**Step 2: What is the headgroup?**
+
+[[A sugar (glucose or galactose)|Q5_Headgroup_Wrong_Sugar]]
+[[No headgroup (ceramide)|Q5_Headgroup_Wrong_Cer]]
+[[Phosphocholine|Q5_Headgroup_Correct]]
+[[Phosphoethanolamine|Q5_Headgroup_Wrong_PE]]
+
+:: Q5_Headgroup_Wrong_PE
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. Phosphoethanolamine has a primary amine (-NH₂). The headgroup here has a trimethylated nitrogen — (CH₃)₃N⁺ — which is choline.</div>
+
+[[Try again|Q5_Backbone_Correct]]
+
+:: Q5_Headgroup_Wrong_Sugar
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. A sugar headgroup would make this a cerebroside or ganglioside. The headgroup here is a phosphate-linked small molecule — look for the phosphate group and what is attached to it.</div>
+
+[[Try again|Q5_Backbone_Correct]]
+
+:: Q5_Headgroup_Wrong_Cer
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. Ceramide has no headgroup — it is just sphingosine + fatty acid. This structure has an additional group attached at C1 via a phosphate.</div>
+
+[[Try again|Q5_Backbone_Correct]]
+
+:: Q5_Headgroup_Correct
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<<set $q5_headgroup to "correct">>
+<div class="correct">✔ Correct! The headgroup is <strong>phosphocholine</strong> — the same headgroup as in PC! This makes it <strong>sphingomyelin (SM)</strong>. Sphingomyelin is the only phospholipid in mammals not built on a glycerol backbone.</div>
+
+---
+
+**Step 3: What is the N-linked fatty acid?**
+
+[[16:0 (Palmitic acid)|Q5_Chain_Correct]]
+[[18:0 (Stearic acid)|Q5_Chain_Wrong_18]]
+[[18:1(9Z) (Oleic acid)|Q5_Chain_Wrong_Oleic]]
+[[24:1(15Z) (Nervonic acid)|Q5_Chain_Wrong_24]]
+
+:: Q5_Chain_Wrong_18
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the N-linked fatty acid chain — there are 16, not 18.</div>
+
+[[Try again|Q5_Headgroup_Correct]]
+
+:: Q5_Chain_Wrong_24
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. Nervonic acid is a very long chain fatty acid (24 carbons). Count again — this chain has 16 carbons.</div>
+
+[[Try again|Q5_Headgroup_Correct]]
+
+:: Q5_Chain_Wrong_Oleic
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<div class="feedback-wrong">❌ Not quite. The N-linked chain here is fully saturated — no double bonds. Oleic acid has a double bond at C9.</div>
+
+[[Try again|Q5_Headgroup_Correct]]
+
+:: Q5_Chain_Correct
+<div class="step-label">Question 5 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/9V6TWk.png" alt="Lipid structure Q5">
+<<set $q5_chain to "correct">>
+<<set $score to $score + 1>>
+<div class="correct">✔ Correct! The N-linked fatty acid is <strong>palmitic acid — 16:0</strong>, attached via an amide bond to the nitrogen of sphingosine.</div>
+
+---
+
+## ✅ Full name: SM(d18:1/16:0)
+
+**Sphingomyelin** is a major component of lipid rafts and the myelin sheath. Note the naming convention: **d18:1** describes the sphingosine backbone (dihydroxy, 18C, 1 double bond), and **16:0** is the N-linked fatty acid.
+
+<div class="score-box">Score so far: <<print $score>> / 6</div>
+
+[[Continue|Question 6]]
+
+:: Question 6
+<div class="step-label">Question 6 of 6</div>
+
+## Identify this lipid
+
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+
+//A neutral lipid with a glycerol backbone and three fatty acid chains linked by ester bonds. There is no phosphate group and no headgroup. The sn-1 and sn-3 chains are saturated 16-carbon fatty acids, and the sn-2 chain is a monounsaturated 18-carbon fatty acid with a double bond at carbon 9 in the cis configuration.//
+
+---
+
+**Step 1: What is the backbone?**
+
+[[A single fatty acid|Q6_Backbone_Wrong_FA]]
+[[Glycerol|Q6_Backbone_Correct]]
+[[Sphingosine|Q6_Backbone_Wrong_Sphingosine]]
+
+:: Q6_Backbone_Wrong_Sphingosine
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. The backbone here is a three-carbon glycerol — but unlike Q1–Q4, all three positions are esterified with fatty acids, and there is no phosphate group.</div>
+
+[[Try again|Question 6]]
+
+:: Q6_Backbone_Wrong_FA
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. There is a three-carbon glycerol backbone here with three fatty acid chains attached.</div>
+
+[[Try again|Question 6]]
+
+:: Q6_Backbone_Correct
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="correct">✔ Correct! Glycerol backbone — but notice something different from Q1–Q4: there is <strong>no phosphate group</strong> and <strong>no headgroup</strong>. All three hydroxyl groups of glycerol are esterified with fatty acids. This is a <strong>triacylglycerol (TAG)</strong>.</div>
+
+---
+
+**Step 2: What is the fatty acid at sn-1?**
+
+[[14:0 (Myristic acid)|Q6_SN1_Wrong_14]]
+[[16:0 (Palmitic acid)|Q6_SN1_Correct]]
+[[16:1(9Z) (Palmitoleic acid)|Q6_SN1_Wrong_Unsat]]
+[[18:0 (Stearic acid)|Q6_SN1_Wrong_18]]
+
+:: Q6_SN1_Wrong_18
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-1 chain — there are 16, not 18.</div>
+
+[[Try again|Q6_Backbone_Correct]]
+
+:: Q6_SN1_Wrong_Unsat
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. The sn-1 chain is fully saturated — no double bonds. Palmitoleic acid has a double bond at C9.</div>
+
+[[Try again|Q6_Backbone_Correct]]
+
+:: Q6_SN1_Wrong_14
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. Myristic acid has 14 carbons. Count again — this chain has 16.</div>
+
+[[Try again|Q6_Backbone_Correct]]
+
+:: Q6_SN1_Correct
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<<set $q6_sn1 to "correct">>
+<div class="correct">✔ Correct! The sn-1 fatty acid is <strong>palmitic acid — 16:0</strong>.</div>
+
+---
+
+**Step 3: What is the fatty acid at sn-2?**
+
+[[16:0 (Palmitic acid)|Q6_SN2_Wrong_16]]
+[[18:0 (Stearic acid)|Q6_SN2_Wrong_Sat]]
+[[18:1(9E) (Elaidic acid)|Q6_SN2_Wrong_Trans]]
+[[18:1(9Z) (Oleic acid)|Q6_SN2_Correct]]
+
+:: Q6_SN2_Wrong_Trans
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. The double bond position is correct (C9) but check the geometry — the double bond here causes a pronounced kink in the chain, which is characteristic of the <em>cis</em> (Z) configuration.</div>
+
+[[Try again|Q6_SN1_Correct]]
+
+:: Q6_SN2_Wrong_Sat
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. The sn-2 chain has a double bond — look carefully. A fully saturated chain would be straight with no kinks.</div>
+
+[[Try again|Q6_SN1_Correct]]
+
+:: Q6_SN2_Wrong_16
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-2 chain — there are 18, not 16. And note the double bond present.</div>
+
+[[Try again|Q6_SN1_Correct]]
+
+:: Q6_SN2_Correct
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<<set $q6_sn2 to "correct">>
+<div class="correct">✔ Correct! The sn-2 fatty acid is <strong>oleic acid — 18:1(9Z)</strong>.</div>
+
+---
+
+**Step 4: What is the fatty acid at sn-3?**
+
+[[14:0 (Myristic acid)|Q6_SN3_Wrong_14]]
+[[16:0 (Palmitic acid)|Q6_SN3_Correct]]
+[[18:0 (Stearic acid)|Q6_SN3_Wrong_18]]
+[[18:1(9Z) (Oleic acid)|Q6_SN3_Wrong_Oleic]]
+
+:: Q6_SN3_Wrong_18
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. Count the carbons in the sn-3 chain — there are 16, not 18.</div>
+
+[[Try again|Q6_SN2_Correct]]
+
+:: Q6_SN3_Wrong_Oleic
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. The sn-3 chain is fully saturated — no double bonds. It is the same chain as sn-1.</div>
+
+[[Try again|Q6_SN2_Correct]]
+
+:: Q6_SN3_Wrong_14
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<div class="feedback-wrong">❌ Not quite. Count again — 16 carbons, not 14.</div>
+
+[[Try again|Q6_SN2_Correct]]
+
+:: Q6_SN3_Correct
+<div class="step-label">Question 6 of 6</div>
+<img class="lipid-image" src="https://i.vgy.me/ti3bK1.png" alt="Lipid structure Q6">
+<<set $q6_sn3 to "correct">>
+<<set $score to $score + 1>>
+<div class="correct">✔ Correct! The sn-3 fatty acid is also <strong>palmitic acid — 16:0</strong>, the same as sn-1.</div>
+
+---
+
+## ✅ Full name: TAG(16:0/18:1(9Z)/16:0)
+
+A **triacylglycerol** — the primary form of energy storage in adipose tissue. No charge, no headgroup, highly hydrophobic. TAGs are stored in lipid droplets and mobilised by lipases during fasting.
+
+<div class="score-box">Score so far: <<print $score>> / 6</div>
+
+[[See your final results|Results]]
+
+:: Results
+# 🏁 Results
+
+<div class="score-box">
+<strong>Final Score: <<print $score>> / 6</strong>
+</div>
+
+---
+
+<<if $score eq 6>>
+<div class="correct">🎉 Perfect score! Excellent work — you have a strong grasp of lipid identification and nomenclature across all major classes.</div>
+<<elseif $score gte 4>>
+<div class="correct">👍 Good effort! You're getting there. Review the questions you found tricky and pay attention to the headgroup distinctions and fatty acid notation.</div>
+<<else>>
+<div class="feedback-wrong">📚 Keep practising! Lipid nomenclature takes time to internalise. Work through the questions again and use the feedback at each step to guide you.</div>
+<</if>>
+
+---
+
+## 📋 Summary of Answers
+
+| # | Lipid | Answer |
+|---|---|---|
+| 1 | POPC | PC(16:0/18:1(9Z)) |
+| 2 | PE species | PE(18:0/18:2(9Z,12Z)) |
+| 3 | PS species | PS(18:0/20:4(5Z,8Z,11Z,14Z)) |
+| 4 | PI species | PI(18:0/18:3(9Z,12Z,15Z)) |
+| 5 | Sphingomyelin | SM(d18:1/16:0) |
+| 6 | TAG | TAG(16:0/18:1(9Z)/16:0) |
+
+---
+
+[[Try again|Start]]
