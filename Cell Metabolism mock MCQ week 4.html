@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biochemistry Metabolism Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .quiz-header {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .question-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .question-text {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 12px;
+            margin-top: 4px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .option label {
+            cursor: pointer;
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .option input[type="radio"]:checked + label {
+            background-color: #e8eaf6;
+        }
+
+        .option label:hover {
+            background-color: #f0f0f0;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border-left: 4px solid #4caf50;
+        }
+
+        .feedback.incorrect {
+            background-color: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #f44336;
+        }
+
+        .feedback-label {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .submit-btn {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background-color: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .reset-btn {
+            background-color: #999;
+            color: white;
+        }
+
+        .reset-btn:hover {
+            background-color: #777;
+        }
+
+        .results {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            border: 2px solid #667eea;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .results-text {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .percentage {
+            font-size: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biochemistry: Cellular Metabolism Quiz</h1>
+        <div class="quiz-header">
+            <p>Test your understanding of glycolysis, the TCA cycle, fatty acid metabolism, and cellular energy.</p>
+        </div>
+
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question-container">
+                <div class="question-number">Question 1 of 15</div>
+                <div class="question-text">Which of the following is the primary energy currency of the cell?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q1a" name="q1" value="A">
+                        <label for="q1a">A. NADH</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1b" name="q1" value="B">
+                        <label for="q1b">B. ATP</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1c" name="q1" value="C">
+                        <label for="q1c">C. FADH₂</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1d" name="q1" value="D">
+                        <label for="q1d">D. GTP</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-container">
+                <div class="question-number">Question 2 of 15</div>
+                <div class="question-text">Which pathway is mainly responsible for the breakdown of glucose to pyruvate?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q2a" name="q2" value="A">
+                        <label for="q2a">A. Pentose Phosphate Pathway</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2b" name="q2" value="B">
+                        <label for="q2b">B. Glycolysis</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2c" name="q2" value="C">
+                        <label for="q2c">C. TCA Cycle</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2d" name="q2" value="D">
+                        <label for="q2d">D. Gluconeogenesis</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-container">
+                <div class="question-number">Question 3 of 15</div>
+                <div class="question-text">Which of the following enzymes is involved in the first step of glycolysis and the PPP?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q3a" name="q3" value="A">
+                        <label for="q3a">A. Hexokinase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3b" name="q3" value="B">
+                        <label for="q3b">B. Phosphofructokinase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3c" name="q3" value="C">
+                        <label for="q3c">C. Pyruvate kinase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3d" name="q3" value="D">
+                        <label for="q3d">D. Aldolase</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-container">
+                <div class="question-number">Question 4 of 15</div>
+                <div class="question-text">Which of the following is a product of the Pentose Phosphate Pathway?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q4a" name="q4" value="A">
+                        <label for="q4a">A. NADPH</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4b" name="q4" value="B">
+                        <label for="q4b">B. ATP</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4c" name="q4" value="C">
+                        <label for="q4c">C. Ribose-5-phosphate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4d" name="q4" value="D">
+                        <label for="q4d">D. Pyruvate</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-container">
+                <div class="question-number">Question 5 of 15</div>
+                <div class="question-text">Which of the following is a key regulatory enzyme/reaction in fatty acid synthesis?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q5a" name="q5" value="A">
+                        <label for="q5a">A. Acetyl-CoA carboxylase / Acetyl-CoA + CO₂ → Malonyl-CoA</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5b" name="q5" value="B">
+                        <label for="q5b">B. Citrate synthase / Acetyl-CoA + Oxaloacetate → Citrate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5c" name="q5" value="C">
+                        <label for="q5c">C. Carnitine oxidase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5d" name="q5" value="D">
+                        <label for="q5d">D. HMG-CoA reductase</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback5"></div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-container">
+                <div class="question-number">Question 6 of 15</div>
+                <div class="question-text">Which molecule is the primary carrier of electrons into the electron transport chain?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q6a" name="q6" value="A">
+                        <label for="q6a">A. NADH</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6b" name="q6" value="B">
+                        <label for="q6b">B. FADH₂</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6c" name="q6" value="C">
+                        <label for="q6c">C. Oxygen</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q6d" name="q6" value="D">
+                        <label for="q6d">D. ATP</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback6"></div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-container">
+                <div class="question-number">Question 7 of 15</div>
+                <div class="question-text">Which enzyme does not have a function during glycolysis?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q7a" name="q7" value="A">
+                        <label for="q7a">A. Hexokinase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7b" name="q7" value="B">
+                        <label for="q7b">B. Phosphofructokinase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7c" name="q7" value="C">
+                        <label for="q7c">C. Pyruvate kinase</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7d" name="q7" value="D">
+                        <label for="q7d">D. Glucose-6-phosphate dehydrogenase</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback7"></div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-container">
+                <div class="question-number">Question 8 of 15</div>
+                <div class="question-text">Which of these is not a common fatty acid in membrane lipids?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q8a" name="q8" value="A">
+                        <label for="q8a">A. Butyrate (C4:0)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8b" name="q8" value="B">
+                        <label for="q8b">B. Palmitate (C16:0)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8c" name="q8" value="C">
+                        <label for="q8c">C. Stearate (C18:0)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8d" name="q8" value="D">
+                        <label for="q8d">D. Oleate (C18:1Δ⁹)</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback8"></div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-container">
+                <div class="question-number">Question 9 of 15</div>
+                <div class="question-text">Insulin produced after a meal...</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q9a" name="q9" value="A">
+                        <label for="q9a">A. Leads to increased glucose uptake by muscle cells</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9b" name="q9" value="B">
+                        <label for="q9b">B. Leads to decreased lipogenesis</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9c" name="q9" value="C">
+                        <label for="q9c">C. Stimulates tiredness</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9d" name="q9" value="D">
+                        <label for="q9d">D. Decreases lipolysis</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback9"></div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-container">
+                <div class="question-number">Question 10 of 15</div>
+                <div class="question-text">Which pathway is upregulated in response to increased fatty acid production?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q10a" name="q10" value="A">
+                        <label for="q10a">A. Glycolysis</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10b" name="q10" value="B">
+                        <label for="q10b">B. TCA Cycle</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10c" name="q10" value="C">
+                        <label for="q10c">C. Glyoxylate shunt</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10d" name="q10" value="D">
+                        <label for="q10d">D. Pentose Phosphate Pathway</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback10"></div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question-container">
+                <div class="question-number">Question 11 of 15</div>
+                <div class="question-text">Which of the following is a key intermediate in the TCA cycle?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q11a" name="q11" value="A">
+                        <label for="q11a">A. Citrate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q11b" name="q11" value="B">
+                        <label for="q11b">B. Glucose-6-phosphate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q11c" name="q11" value="C">
+                        <label for="q11c">C. Pyruvate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q11d" name="q11" value="D">
+                        <label for="q11d">D. Acetyl-CoA</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback11"></div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question-container">
+                <div class="question-number">Question 12 of 15</div>
+                <div class="question-text">What is/are the product/s of the pyruvate dehydrogenase complex reaction during aerobic metabolism?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q12a" name="q12" value="A">
+                        <label for="q12a">A. Acetyl-CoA and CO₂</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q12b" name="q12" value="B">
+                        <label for="q12b">B. Glyoxylate and Succinate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q12c" name="q12" value="C">
+                        <label for="q12c">C. Lactate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q12d" name="q12" value="D">
+                        <label for="q12d">D. Citrate and Coenzyme A</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback12"></div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question-container">
+                <div class="question-number">Question 13 of 15</div>
+                <div class="question-text">Which of the following TCA Cycle metabolites has a key role in gluconeogenesis?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q13a" name="q13" value="A">
+                        <label for="q13a">A. Citrate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q13b" name="q13" value="B">
+                        <label for="q13b">B. α-ketoglutarate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q13c" name="q13" value="C">
+                        <label for="q13c">C. Oxaloacetate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q13d" name="q13" value="D">
+                        <label for="q13d">D. Fumarate</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback13"></div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question-container">
+                <div class="question-number">Question 14 of 15</div>
+                <div class="question-text">Which of the following is involved in fatty acid β-oxidation?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q14a" name="q14" value="A">
+                        <label for="q14a">A. Acetyl-CoA</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q14b" name="q14" value="B">
+                        <label for="q14b">B. Pyruvate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q14c" name="q14" value="C">
+                        <label for="q14c">C. Lactate</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q14d" name="q14" value="D">
+                        <label for="q14d">D. Citrate</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback14"></div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question-container">
+                <div class="question-number">Question 15 of 15</div>
+                <div class="question-text">Which of the following is not a polysaccharide?</div>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="q15a" name="q15" value="A">
+                        <label for="q15a">A. Cellulose</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q15b" name="q15" value="B">
+                        <label for="q15b">B. Amylose</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q15c" name="q15" value="C">
+                        <label for="q15c">C. Lactose</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q15d" name="q15" value="D">
+                        <label for="q15d">D. Glycogen</label>
+                    </div>
+                </div>
+                <div class="feedback" id="feedback15"></div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+                <button type="reset" class="reset-btn" onclick="resetQuiz()">Reset</button>
+            </div>
+        </form>
+
+        <div class="results" id="results">
+            <div class="results-text">Quiz Complete!</div>
+            <div class="score" id="scoreDisplay">0/15</div>
+            <div class="percentage" id="percentageDisplay">0%</div>
+        </div>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'B', q2: 'B', q3: 'A', q4: 'A', q5: 'A',
+            q6: 'A', q7: 'D', q8: 'A', q9: 'A', q10: 'D',
+            q11: 'A', q12: 'A', q13: 'C', q14: 'A', q15: 'C'
+        };
+
+        const feedbacks = {
+            q1: {
+                correct: 'ATP (adenosine triphosphate) is indeed the universal energy currency of the cell. Its hydrolysis to ADP releases energy that powers countless cellular processes. While NADH and FADH₂ are electron carriers and GTP is an alternative nucleotide triphosphate, ATP is the primary energy molecule.',
+                incorrect: 'While {answer} plays an important role in metabolism, it is not the primary energy currency. ATP is the molecule that cells use directly to power energy-requiring processes.'
+            },
+            q2: {
+                correct: 'Glycolysis is the metabolic pathway that converts glucose to pyruvate, occurring in the cytoplasm. It is the first step in both aerobic and anaerobic metabolism. The pentose phosphate pathway has a different role (NADPH production and ribose synthesis).',
+                incorrect: 'While {answer} is important in metabolism, it does not perform the primary breakdown of glucose to pyruvate. Glycolysis is the central pathway for this conversion.'
+            },
+            q3: {
+                correct: 'Correct! Hexokinase catalyzes the phosphorylation of glucose to glucose-6-phosphate, the first committed step in both glycolysis and the pentose phosphate pathway. This is why it serves as a branch point enzyme.',
+                incorrect: 'While {answer} is involved in glucose metabolism, it does not catalyze the first step of both pathways. Hexokinase is the enzyme that phosphorylates glucose, allowing it to enter both glycolysis and the PPP.'
+            },
+            q4: {
+                correct: 'The pentose phosphate pathway produces both NADPH (for biosynthetic reactions and antioxidant defense) and ribose-5-phosphate (for nucleotide synthesis). However, NADPH is one of its primary products. Note that choice C is also a product, but A is more fundamental to the pathway\'s primary oxidative function.',
+                incorrect: 'The pentose phosphate pathway does not directly produce {answer}. Its key products are NADPH (reducing power for biosynthesis) and ribose-5-phosphate (for nucleotide synthesis).'
+            },
+            q5: {
+                correct: 'Acetyl-CoA carboxylase catalyzes the formation of malonyl-CoA from acetyl-CoA, which is the first committed and rate-limiting step of fatty acid synthesis. This enzyme is a key regulatory point and is inhibited by AMP and activated by citrate.',
+                incorrect: '{answer} has a role in metabolism but is not the key regulatory enzyme for fatty acid synthesis. Acetyl-CoA carboxylase is the primary control point for initiation of fatty acid biosynthesis.'
+            },
+            q6: {
+                correct: 'NADH is the primary electron carrier that donates electrons to Complex I of the electron transport chain. FADH₂ also enters at Complex II, and oxygen is the final electron acceptor, but NADH is the main entry point for electrons from glycolysis and the TCA cycle.',
+                incorrect: 'While {answer} is involved in cellular respiration, NADH is the primary electron carrier that enters the electron transport chain at its first complex. This makes it essential for the majority of ATP production.'
+            },
+            q7: {
+                correct: 'Glucose-6-phosphate dehydrogenase catalyzes the first committed step of the pentose phosphate pathway, not glycolysis. Hexokinase, phosphofructokinase, and pyruvate kinase are all essential glycolytic enzymes.',
+                incorrect: '{answer} is actually involved in glycolysis. The correct answer, glucose-6-phosphate dehydrogenase, catalyzes the first step of the pentose phosphate pathway instead.'
+            },
+            q8: {
+                correct: 'Butyrate (C4:0) is a short-chain fatty acid found mainly in bacterial lipids and some dietary sources, not typically incorporated into mammalian membrane lipids. Palmitate, stearate, and oleate are the common long-chain fatty acids found in biological membranes.',
+                incorrect: '{answer} is actually a common constituent of biological membranes. Butyrate, being short-chain, is not typically incorporated into membrane lipids where longer-chain fatty acids are preferred.'
+            },
+            q9: {
+                correct: 'Insulin acts as the fed-state hormone, promoting glucose uptake in muscle and adipose tissue via GLUT4 translocation. It also promotes anabolic processes like lipogenesis and inhibits catabolic processes like lipolysis and gluconeogenesis.',
+                incorrect: 'While insulin does promote anabolic processes, {answer} is not the primary effect described. The most direct and immediate effect is increased glucose uptake by muscle and fat cells, reducing blood glucose.'
+            },
+            q10: {
+                correct: 'The pentose phosphate pathway is upregulated when cells are actively synthesizing fatty acids because it produces NADPH, the reducing power needed for fatty acid synthesis. The PPP provides the reducing equivalents that drive anabolic biosynthesis.',
+                incorrect: '{answer} is important in metabolism, but the pentose phosphate pathway is the one specifically upregulated to provide NADPH for biosynthetic reactions like fatty acid synthesis.'
+            },
+            q11: {
+                correct: 'Citrate is the first product formed when acetyl-CoA condenses with oxaloacetate, catalyzed by citrate synthase. It is the entry point into the TCA cycle and serves as a key regulatory molecule and biosynthetic precursor.',
+                incorrect: '{answer} plays a role in cellular metabolism, but citrate is the defining first intermediate of the TCA cycle, making it the most appropriate answer.'
+            },
+            q12: {
+                correct: 'The pyruvate dehydrogenase complex catalyzes the oxidative decarboxylation of pyruvate to acetyl-CoA with the release of CO₂. This is the link between glycolysis and the TCA cycle and is irreversible under physiological conditions.',
+                incorrect: '{answer} is not the product of the pyruvate dehydrogenase reaction. This enzyme complex produces acetyl-CoA (which enters the TCA cycle) and CO₂ (released as a waste product).'
+            },
+            q13: {
+                correct: 'Oxaloacetate is the crucial TCA cycle intermediate for gluconeogenesis. It is the first molecule synthesized in gluconeogenesis (from pyruvate via pyruvate carboxylase) and is essential for glucose synthesis during fasting states.',
+                incorrect: 'While {answer} is a TCA cycle intermediate, oxaloacetate is the key metabolite that directly feeds into gluconeogenesis. It serves as the bridge between carbohydrate and amino acid metabolism.',
+            },
+            q14: {
+                correct: 'Acetyl-CoA is the product of fatty acid β-oxidation. Each cycle of β-oxidation removes a 2-carbon unit as acetyl-CoA, which then enters the TCA cycle for energy production. This is the main source of ATP during fasting.',
+                incorrect: '{answer} is not directly involved in β-oxidation. Acetyl-CoA is the key product generated from the sequential removal of 2-carbon units from fatty acids.'
+            },
+            q15: {
+                correct: 'Lactose is a disaccharide (glucose + galactose), not a polysaccharide. Polysaccharides have many repeating monosaccharide units. Cellulose, amylose, and glycogen are all polysaccharides with different structures and functions.',
+                incorrect: '{answer} is actually a polysaccharide made of many glucose or glucose-derived units. Lactose is the only disaccharide in this list, making it not a polysaccharide.'
+            }
+        };
+
+        function showFeedback(questionNum, isCorrect, selectedAnswer) {
+            const feedbackEl = document.getElementById(`feedback${questionNum}`);
+            const feedback = feedbacks[`q${questionNum}`];
+            let message = '';
+
+            if (isCorrect) {
+                feedbackEl.className = 'feedback show correct';
+                message = `<div class="feedback-label">✓ Correct!</div>${feedback.correct}`;
+            } else {
+                feedbackEl.className = 'feedback show incorrect';
+                const incorrectMsg = feedback.incorrect.replace('{answer}', selectedAnswer);
+                message = `<div class="feedback-label">✗ Incorrect</div>${incorrectMsg}`;
+            }
+
+            feedbackEl.innerHTML = message;
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 15; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                    answered++;
+                    const isCorrect = selected.value === answers[`q${i}`];
+                    if (isCorrect) score++;
+                    showFeedback(i, isCorrect, selected.value);
+                }
+            }
+
+            if (answered === 0) {
+                alert('Please answer at least one question before submitting.');
+                return;
+            }
+
+            const percentage = Math.round((score / 15) * 100);
+            document.getElementById('scoreDisplay').textContent = `${score}/15`;
+            document.getElementById('percentageDisplay').textContent = `${percentage}%`;
+            document.getElementById('results').classList.add('show');
+
+            window.scrollTo(0, document.getElementById('results').offsetTop - 100);
+        }
+
+        function resetQuiz() {
+            document.getElementById('quizForm').reset();
+            document.getElementById('results').classList.remove('show');
+
+            for (let i = 1; i <= 15; i++) {
+                document.getElementById(`feedback${i}`).classList.remove('show');
+            }
+
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
