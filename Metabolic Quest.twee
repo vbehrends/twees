@@ -1,0 +1,405 @@
+:: StoryTitle
+Metabolic Quest
+
+
+:: StoryData
+{
+  "ifid": "EAD9ADBB-2D04-4370-B355-119887B32EAB",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "The start line",
+  "zoom": 1
+}
+
+
+:: \ Aerobic Attempt {"position":"650,1100","size":"100,100"}
+⚠️ PARTIALLY CORRECT — but not ideal right now!
+
+Under aerobic conditions, pyruvate WOULD enter 
+the mitochondria via Pyruvate Dehydrogenase 
+→ forming Acetyl-CoA → TCA Cycle.
+
+BUT — oxygen is LIMITED during this sprint! 
+
+The TCA cycle and oxidative phosphorylation 
+are running SLOWLY due to low O₂.
+
+If the cell relies only on this route, 
+glycolysis stalls because NADH 
+cannot be reoxidised fast enough.
+
+The sprinter slows dramatically... 😰
+
+⚡ ATP Bank: -1 ATP (glycolysis stalls)
+
+[[🔁 Reconsider -> Pyruvate Decision]]
+
+
+:: \ Anaerobic Correct {"position":"525,1100","size":"100,100"}
+✅ CORRECT! — Smart metabolic thinking! 🧠
+
+Lactate Dehydrogenase (LDH) converts pyruvate 
+to LACTATE, simultaneously oxidising NADH → NAD⁺
+
+This regenerates NAD⁺ and keeps 
+glycolysis running at FULL SPEED! 🔄
+
+⚠️ No extra ATP is made here — 
+but glycolysis can continue!
+
+This is why lactate builds up during a sprint 
+— it's not a waste product, it's a SURVIVAL STRATEGY! 💡
+
+The lactate will be recycled later 
+(Cori Cycle — liver converts it back to glucose!)
+
+⚡ ATP Bank: +2 ATP (glycolysis keeps running!)
+🏃 The sprinter pushes through the burn!
+
+[[➡️ The Final Push — Oxygen Returns -> Oxygen Returns]]
+
+
+:: \ Fermentation Wrong {"position":"775,1100","size":"100,100"}
+❌ WRONG!
+
+Ethanol fermentation happens in YEAST 🍺 — 
+not in human muscle cells!
+
+Imagine if your muscles produced alcohol 
+during exercise... 😂
+
+Human muscles use LACTATE, not ethanol, 
+to regenerate NAD⁺.
+
+⚡ ATP Bank: -2 ATP 😬
+🏃 The sprinter trips over their own feet...
+
+[[🔁 Try again -> Pyruvate Decision]]
+
+
+:: \ Final Score {"position":"400,1475","size":"100,100"}
+🏆 METABOLIC QUEST COMPLETE!
+==============================
+
+The sprint is over. Let's count your ATP...
+
+🧮 SCORING SUMMARY:
+  • Glycogen Breakdown:      +1 ATP
+  • Glycolysis:              +2 ATP
+  • Anaerobic phase:         +2 ATP  
+  • Aerobic recovery:       +30 ATP
+                           --------
+  • MAXIMUM SCORE:          ~35 ATP 🏆
+
+💡 KEY LESSONS FROM THIS SPRINT:
+
+1️⃣ Muscle cells use BOTH aerobic and 
+   anaerobic pathways — often simultaneously
+
+2️⃣ Lactate is NOT a waste product — 
+   it's a clever NAD⁺ recycling strategy
+
+3️⃣ The oxygen debt explains why you 
+   breathe hard AFTER exercise stops
+
+4️⃣ Glycolysis is fast but low yield — 
+   the TCA + OxPhos is slow but high yield
+
+5️⃣ The balance between these pathways 
+   depends on OXYGEN AVAILABILITY
+
+🎓 Well done — you've just survived 
+   a 100m sprint at the molecular level!
+
+[[🔁 Play Again ->The start line]]
+
+
+:: \ Glycolysis {"position":"775,725","size":"100,100"}
+🔥 STAGE 1: GLYCOLYSIS
+========================
+
+Glucose-6-phosphate enters glycolysis 
+in the cytoplasm.
+
+The cell needs ATP NOW — oxygen supply 
+is already becoming limited as the sprint intensifies.
+
+Glycolysis splits glucose into two molecules of pyruvate.
+
+What is the NET ATP yield from glycolysis 
+of ONE glucose molecule?
+
+[[🅰️ 2 ATP -> Glycolysis Correct]]
+[[🅱️ 4 ATP -> Glycolysis Wrong 1]]
+[[🅾️ 36 ATP -> Glycolysis Wrong 2]]
+
+
+:: \ Glycolysis Correct {"position":"650,850","size":"100,100"}
+✅ CORRECT!
+
+Glycolysis invests 2 ATP and generates 4 ATP
+— a NET gain of 2 ATP. ⚡
+
+It also produces:
+  • 2x Pyruvate 🧪
+  • 2x NADH (electron carriers, useful later!)
+  • 2x ATP (net)
+
+This happens in the CYTOPLASM — 
+no oxygen needed! Perfect for a sprint. 💨
+
+⚡ ATP Bank: +2 ATP
+🏃 The sprinter hits full stride!
+
+[[➡️ What happens to Pyruvate? -> Pyruvate Decision]]
+
+
+:: \ Glycolysis Hint {"position":"775,975","size":"100,100"}
+💡 HINT: The Two Phases of Glycolysis
+=======================================
+
+Glycolysis has two distinct phases:
+
+⬇️ INVESTMENT PHASE (costs ATP):
+  • Glucose is phosphorylated TWICE
+  • Costs 2 ATP
+
+⬆️ PAYOFF PHASE (makes ATP):
+  • Each 3-carbon molecule generates 2 ATP
+  • Two 3-carbon molecules = 4 ATP total
+
+🧮 NET YIELD = ?
+
+<img src="https://i.vgy.me/TZbatH.jpg" 
+style="width:100%; max-width:500px;">
+
+[[🔁 Back to Question -> Glycolysis]]
+
+
+:: \ Glycolysis Wrong 1 {"position":"775,850","size":"100,100"}
+❌ NOT QUITE!
+
+4 ATP is the GROSS yield — but remember, 
+glycolysis has TWO phases...
+
+An INVESTMENT phase and a PAYOFF phase.
+
+Think carefully about the net result. 😅
+
+⚡ ATP Bank: 0
+🏃 The sprinter loses a step...
+
+[[🔁 Try Again -> Glycolysis]]
+[[💡 View Hint -> Glycolysis Hint]]
+
+
+:: \ Glycolysis Wrong 2 {"position":"900,850","size":"100,100"}
+❌ WHOOPS!
+
+36-38 ATP is the yield for the ENTIRE 
+aerobic respiration pathway — not just glycolysis!
+
+Think smaller — glycolysis is just 
+the FIRST stage of metabolism.
+
+⚡ ATP Bank: -1 ATP 😬
+🏃 The sprinter is struggling...
+
+[[🔁 Try Again -> Glycolysis]]
+[[💡 View Hint -> Glycolysis Hint]]
+
+
+:: \ Lactate Correct {"position":"400,1350","size":"100,100"}
+✅ BRILLIANT! 🌟
+
+Lactate Dehydrogenase works in REVERSE 
+now that oxygen is available:
+
+Lactate → Pyruvate + NADH
+
+Pyruvate then enters the mitochondria:
+  • Pyruvate Dehydrogenase → Acetyl-CoA
+  • Acetyl-CoA → TCA Cycle 🔄
+  • TCA → NADH + FADH₂
+  • Oxidative Phosphorylation → ~30 ATP ⚡⚡⚡
+
+This is why you keep breathing hard 
+AFTER exercise stops — you're repaying 
+the oxygen debt and processing all that lactate!
+
+⚡ ATP Bank: +30 ATP 🎉
+🏃 Full recovery underway!
+
+[[➡️ See your final score -> Final Score]]
+
+
+:: \ Lactate Wrong 1 {"position":"525,1350","size":"100,100"}
+❌ NOT QUITE!
+
+A small amount of lactate IS lost 
+in sweat and urine, but this is negligible.
+
+The MAJORITY of lactate is a valuable 
+metabolic fuel — the body doesn't waste it!
+
+Most lactate is:
+  • Recycled in the muscle itself, OR
+  • Sent to the liver (Cori Cycle) 
+    to be converted back to glucose
+
+⚡ ATP Bank: 0
+[[🔁 Try again -> Oxygen Returns]]
+
+
+:: \ Lactate Wrong 2 {"position":"650,1350","size":"100,100"}
+❌ NOT QUITE!
+
+Lactate cannot be converted DIRECTLY to ATP.
+
+It must first be converted back to Pyruvate,
+then processed through the TCA cycle 
+and oxidative phosphorylation to yield ATP.
+
+There are no shortcuts in metabolism! 😄
+
+⚡ ATP Bank: -1 ATP
+[[🔁 Try again -> Oxygen Returns]]
+
+
+:: \ Oxygen Returns {"position":"525,1225","size":"100,100"}
+🌬️ STAGE 3: CROSSING THE FINISH LINE
+=======================================
+
+The sprinter crosses the finish line! 🏁
+
+They're bent over, breathing HARD. 
+Oxygen is now flooding back into the muscle.
+
+The lactate that built up during the sprint 
+is now being dealt with.
+
+This is called the "oxygen debt" 
+or EPOC (Excess Post-exercise Oxygen Consumption).
+
+What happens to the LACTATE now 
+that oxygen is available again?
+
+[[🅰️ Lactate is converted back to Pyruvate and enters the TCA Cycle -> Lactate Correct]]
+[[🅱️ Lactate is excreted in urine -> Lactate Wrong 1]]
+[[🅾️ Lactate is converted directly to ATP -> Lactate Wrong 2]]
+
+
+:: \ Pyruvate Decision {"position":"650,975","size":"100,100"}
+⚖️ STAGE 2: THE OXYGEN CRISIS
+================================
+
+Two pyruvate molecules are ready. 
+But here's the problem...
+
+The sprint is 70 metres in. 
+Oxygen delivery CANNOT keep up 
+with the muscle's demand. 😤
+
+The cell faces a critical decision:
+
+The NADH produced in glycolysis needs 
+to be regenerated back to NAD⁺ — 
+otherwise glycolysis STOPS.
+
+How does the muscle cell regenerate NAD⁺ 
+when oxygen is LIMITED?
+
+[[🅰️ Convert pyruvate to Lactate (Lactate Dehydrogenase) -> Anaerobic Correct]]
+[[🅱️ Send pyruvate to the mitochondria for the TCA cycle -> Aerobic Attempt]]
+[[🅾️ Convert pyruvate to Ethanol -> Fermentation Wrong]]
+
+
+:: Dip into the easy-access store {"position":"900,475","size":"100,100"}
+⚡ STAGE 0: MOBILISING FUEL
+=============================
+
+The muscle cell has no free glucose yet.
+Energy stores are locked up as GLYCOGEN.
+
+A signal arrives — adrenaline is flooding the bloodstream! 🚨
+
+The cell needs to break glycogen down to enter metabolism.
+
+Which enzyme is responsible for breaking glycogen 
+down into glucose-1-phosphate?
+
+[[🅰️ Glycogen Phosphorylase ->Glycogen Correct]]
+[[🅱️ Glycogen Synthase ->Glycogen Wrong 1]]
+[[🅾️ Hexokinase ->Glycogen Wrong 2]]
+
+
+:: Glycogen Correct {"position":"775,600","size":"100,100"}
+✅ CORRECT!
+
+Glycogen Phosphorylase cleaves glucose units 
+from glycogen, producing glucose-1-phosphate.
+
+This is quickly converted to glucose-6-phosphate 
+— skipping the need for hexokinase and 
+SAVING 1 ATP! 💰
+
+⚡ ATP Bank: +1 ATP (saved, not spent!)
+🏃 The sprinter accelerates!
+
+[[➡️ Enter Glycolysis -> Glycolysis]]
+
+
+:: Glycogen Wrong 1 {"position":"900,600","size":"100,100"}
+❌ NOT QUITE!
+
+Glycogen Synthase does the OPPOSITE — 
+it BUILDS glycogen, it doesn't break it down.
+
+The cell wastes precious milliseconds. 
+The sprinter stumbles slightly. 😬
+
+⚡ ATP Bank: 0 (no gain)
+
+[[🔁 Try again ->Dip into the easy-access store]]
+
+
+:: Glycogen Wrong 2 {"position":"1025,600","size":"100,100"}
+❌ CLOSE, BUT NO!
+
+Hexokinase phosphorylates FREE glucose — 
+but glycogen must be broken down FIRST 
+before hexokinase can act.
+
+Also, using hexokinase here would 
+COST 1 ATP rather than save it!
+
+⚡ ATP Bank: -1 ATP 😬
+🏃 The sprinter feels the burn early...
+
+[[🔁 Try again ->Dip into the easy-access store]]
+
+
+:: The start line {"position":"900,350","size":"100,100"}
+🏃 METABOLIC QUEST: THE SPRINT
+================================
+
+It's race day.
+
+You are a metabolic regulator, quietly idling in a muscle cell of an elite sprinter.
+
+The starting pistol fires. 🔫
+
+Suddenly, the cell is in CRISIS. ATP levels are 
+dropping FAST. The muscle is screaming for energy.
+
+Your mission: guide glucose through metabolism, 
+make smart decisions, and keep this sprinter moving.
+
+⚡ Every correct choice = ATP gained
+☠️ Every wrong choice = ATP lost + the sprinter slows down
+
+Your ATP Bank: 0 ATP
+
+Are you ready?
+
+[[🏁 Begin the Sprint ->Dip into the easy-access store]]
