@@ -1,0 +1,193 @@
+:: StoryData
+{
+  "ifid": "A1111111-B222-C333-D444-E55555555555",
+  "format": "SugarCube",
+  "format-version": "2.36.1"
+}
+
+:: Start
+<<set $totalCorrect = 0>><<set $totalPossible = 0>><<set $totalIncorrect = 0>>
+# Cell Metabolism Lecture 3 Quiz
+All questions are select-all-that-apply. Click Submit to continue.
+
+[[Start Quiz->Q1]]
+
+:: Q1
+Which statement best explains why humans can survive much longer without food than would be predicted from glycogen stores alone?
+
+<<checkbox "$q1_A" false true>> A. Glycogen stores increase during fasting
+<<checkbox "$q1_B" false true>> B. Most tissues can switch to fatty acid oxidation and lipid stores contain much more energy than glycogen
+<<checkbox "$q1_C" false true>> C. Proteins are the main long-term energy reserve
+<<checkbox "$q1_D" false true>> D. The brain exclusively oxidises fatty acids during fasting
+
+<<button "Submit">><<goto "F1">><</button>>
+
+:: F1
+<<set _correct=0>><<set _incorrect=0>><<set _missed=[]>><<set _wrong=[]>>
+<<if $q1_B>><<set _correct +=1>><<else>><<run _missed.push("B. Most tissues can switch to fatty acid oxidation and lipid stores contain much more energy than glycogen")>><</if>>
+<<if $q1_A>><<set _incorrect +=1>><<run _wrong.push("A. Glycogen stores increase during fasting")>><</if>><<if $q1_C>><<set _incorrect +=1>><<run _wrong.push("C. Proteins are the main long-term energy reserve")>><</if>><<if $q1_D>><<set _incorrect +=1>><<run _wrong.push("D. The brain exclusively oxidises fatty acids during fasting")>><</if>>
+<<set $totalCorrect += _correct>><<set $totalPossible += 1>><<set $totalIncorrect += _incorrect>>
+Model answer: B. Most tissues can switch to fatty acid oxidation and lipid stores contain much more energy than glycogen.
+
+Humans store relatively little carbohydrate as glycogen, but adipose triacylglycerol reserves contain far more chemical energy. During fasting, many tissues increase fatty acid oxidation, reducing glucose demand. Glycogen stores do not increase during fasting, proteins are not the preferred long-term energy reserve, and the brain cannot exclusively oxidise fatty acids because they cross the blood-brain barrier poorly. Ketone bodies partially support brain metabolism during prolonged fasting.
+
+You correctly identified _correct of 1 correct answers. Missed <<= 1 - _correct >> correct answers. Selected _incorrect incorrect answers.
+Missed correct answers: <<= _missed.length ? _missed.join('; ') : 'None' >>
+Incorrect selections: <<= _wrong.length ? _wrong.join('; ') : 'None' >>
+
+[[Next->Q2]]
+
+:: Q2
+Which shorthand notation corresponds to palmitic acid?
+<<checkbox "$q2_A" false true>> A. C18:0
+<<checkbox "$q2_B" false true>> B. C14:0
+<<checkbox "$q2_C" false true>> C. C16:0
+<<checkbox "$q2_D" false true>> D. C16:1(9Z)
+<<button "Submit">><<goto "F2">><</button>>
+
+:: F2
+<<set _correct=0>><<set _incorrect=0>><<set _missed=[]>><<set _wrong=[]>>
+<<if $q2_C>><<set _correct +=1>><<else>><<run _missed.push("C. C16:0")>><</if>>
+<<if $q2_A>><<set _incorrect +=1>><<run _wrong.push("A. C18:0")>><</if>><<if $q2_B>><<set _incorrect +=1>><<run _wrong.push("B. C14:0")>><</if>><<if $q2_D>><<set _incorrect +=1>><<run _wrong.push("D. C16:1(9Z)")>><</if>>
+<<set $totalCorrect += _correct>><<set $totalPossible += 1>><<set $totalIncorrect += _incorrect>>
+Model answer: C. C16:0.
+Palmitic acid contains sixteen carbon atoms and no double bonds, giving the notation C16:0. C18:0 is stearic acid, C14:0 is myristic acid, and C16:1(9Z) is a monounsaturated fatty acid. Fatty acid nomenclature summarises chain length and degree of unsaturation, features that strongly influence membrane properties, storage lipids, and metabolic processing.
+You correctly identified _correct of 1 correct answers. Missed <<= 1 - _correct >> correct answers. Selected _incorrect incorrect answers.
+Missed correct answers: <<= _missed.length ? _missed.join('; ') : 'None' >>
+Incorrect selections: <<= _wrong.length ? _wrong.join('; ') : 'None' >>
+[[Next->Q3]]
+
+:: Q3
+Which property is characteristic of cis double bonds in fatty acids?
+<<checkbox "$q3_A" false true>> A. They introduce a bend in the hydrocarbon chain
+<<checkbox "$q3_B" false true>> B. They increase chain length
+<<checkbox "$q3_C" false true>> C. They remove the carboxyl group
+<<checkbox "$q3_D" false true>> D. They make the fatty acid fully saturated
+<<button "Submit">><<goto "F3">><</button>>
+
+:: F3
+<<set _correct=0>><<set _incorrect=0>><<set _missed=[]>><<set _wrong=[]>><<if $q3_A>><<set _correct+=1>><<else>><<run _missed.push("A. They introduce a bend in the hydrocarbon chain")>><</if>><<if $q3_B>><<set _incorrect+=1>><<run _wrong.push("B. They increase chain length")>><</if>><<if $q3_C>><<set _incorrect+=1>><<run _wrong.push("C. They remove the carboxyl group")>><</if>><<if $q3_D>><<set _incorrect+=1>><<run _wrong.push("D. They make the fatty acid fully saturated")>><</if>><<set $totalCorrect += _correct>><<set $totalPossible += 1>><<set $totalIncorrect += _incorrect>>
+Model answer: A. They introduce a bend in the hydrocarbon chain.
+Cis double bonds generate kinks that reduce tight packing of fatty acyl chains and increase membrane fluidity. They do not change chain length, remove functional groups, or create saturated fatty acids. Unsaturation affects membrane behaviour, lipid melting temperatures, and interactions of biological membranes with proteins.
+You correctly identified _correct of 1 correct answers. Missed <<= 1 - _correct >> correct answers. Selected _incorrect incorrect answers.
+Missed correct answers: <<= _missed.length ? _missed.join('; ') : 'None' >>
+Incorrect selections: <<= _wrong.length ? _wrong.join('; ') : 'None' >>
+[[Next->Q4]]
+
+:: Q4
+Which of the following are products of the pentose phosphate pathway?
+<<checkbox "$q4_A" false true>> A. NADPH
+<<checkbox "$q4_B" false true>> B. Ribose-5-phosphate
+<<checkbox "$q4_C" false true>> C. Acetyl-CoA
+<<checkbox "$q4_D" false true>> D. FADH2
+<<button "Submit">><<goto "F4">><</button>>
+
+:: F4
+<<set _correct=0>><<set _incorrect=0>><<set _missed=[]>><<set _wrong=[]>>
+<<if $q4_A>><<set _correct+=1>><<else>><<run _missed.push("A. NADPH")>><</if>><<if $q4_B>><<set _correct+=1>><<else>><<run _missed.push("B. Ribose-5-phosphate")>><</if>><<if $q4_C>><<set _incorrect+=1>><<run _wrong.push("C. Acetyl-CoA")>><</if>><<if $q4_D>><<set _incorrect+=1>><<run _wrong.push("D. FADH2")>><</if>><<set $totalCorrect += _correct>><<set $totalPossible += 2>><<set $totalIncorrect += _incorrect>>
+Model answer: A. NADPH; B. Ribose-5-phosphate.
+The pentose phosphate pathway generates NADPH for reductive biosynthesis and antioxidant defence, and ribose-5-phosphate for nucleotide synthesis. It does not directly produce acetyl-CoA or FADH2. Its oxidative branch supplies reducing power, whereas non-oxidative reactions interconvert sugar phosphates according to cellular biosynthetic demands.
+You correctly identified _correct of 2 correct answers. Missed <<= 2-_correct >> correct answers. Selected _incorrect incorrect answers.
+Missed correct answers: <<= _missed.length ? _missed.join('; ') : 'None' >>
+Incorrect selections: <<= _wrong.length ? _wrong.join('; ') : 'None' >>
+[[Next->Q5]]
+
+:: Q5
+Which are TAGs composed of?
+<<checkbox "$q5_A" false true>> A. A glycerol backbone and three fatty acids
+<<checkbox "$q5_B" false true>> B. A sphingosine backbone and one fatty acid
+<<checkbox "$q5_C" false true>> C. Cholesterol and three fatty acids
+<<checkbox "$q5_D" false true>> D. Two glycerol molecules and three fatty acids
+<<button "Submit">><<goto "F5">><</button>>
+
+:: F5
+<<set _correct=($q5_A?1:0)>><<set _incorrect=0>><<set _missed=[]>><<set _wrong=[]>><<if !$q5_A>><<run _missed.push("A. A glycerol backbone and three fatty acids")>><</if>><<if $q5_B>><<set _incorrect+=1>><<run _wrong.push("B. A sphingosine backbone and one fatty acid")>><</if>><<if $q5_C>><<set _incorrect+=1>><<run _wrong.push("C. Cholesterol and three fatty acids")>><</if>><<if $q5_D>><<set _incorrect+=1>><<run _wrong.push("D. Two glycerol molecules and three fatty acids")>><</if>><<set $totalCorrect += _correct>><<set $totalPossible += 1>><<set $totalIncorrect += _incorrect>>
+Model answer: A. A glycerol backbone and three fatty acids.
+Triacylglycerols contain three fatty acids esterified to a single glycerol molecule and serve as major energy-storage lipids. Sphingosine-containing molecules belong to sphingolipid classes, cholesterol is a sterol, and two glycerol backbones are not part of TAG structure. TAG hydrolysis releases fatty acids for mitochondrial beta-oxidation.
+You correctly identified _correct of 1 correct answers. Missed <<=1-_correct>> correct answers. Selected _incorrect incorrect answers.
+Missed correct answers: <<= _missed.length ? _missed.join('; ') : 'None' >>
+Incorrect selections: <<= _wrong.length ? _wrong.join('; ') : 'None' >>
+[[Next->Q6]]
+
+:: Q6
+What is the primary role of NADPH in the cell?
+<<checkbox "$q6_A" false true>> A. Driving ATP synthesis through the respiratory chain
+<<checkbox "$q6_B" false true>> B. Supporting anabolic reactions and antioxidant defence
+<<checkbox "$q6_C" false true>> C. Activating fatty acids for beta-oxidation
+<<checkbox "$q6_D" false true>> D. Transporting fatty acids into mitochondria
+<<button "Submit">><<goto "F6">><</button>>
+
+:: F6
+<<set _correct=($q6_B?1:0)>><<set _incorrect=($q6_A?1:0)+($q6_C?1:0)+($q6_D?1:0)>><<set $totalCorrect+=_correct>><<set $totalPossible+=1>><<set $totalIncorrect+=_incorrect>>
+Model answer: B. Supporting anabolic reactions and antioxidant defence.
+NADPH supplies reducing equivalents for fatty acid and cholesterol synthesis and maintains reduced glutathione for protection against oxidative stress. ATP synthesis primarily depends on NADH oxidation in the respiratory chain. Fatty acid activation requires acyl-CoA synthetases, while mitochondrial transport depends on the carnitine shuttle.
+You correctly identified _correct of 1 correct answers. Missed <<=1-_correct>> correct answers. Selected _incorrect incorrect answers.
+[[Next->Q7]]
+
+:: Q7
+Which process occurs in the mitochondria?
+<<checkbox "$q7_A" false true>> A. Fatty acid synthesis
+<<checkbox "$q7_B" false true>> B. Pentose phosphate pathway
+<<checkbox "$q7_C" false true>> C. Beta-oxidation of fatty acids
+<<checkbox "$q7_D" false true>> D. Conversion of citrate to malonyl-CoA
+<<button "Submit">><<goto "F7">><</button>>
+
+:: F7
+<<set _correct=($q7_C?1:0)>><<set _incorrect=($q7_A?1:0)+($q7_B?1:0)+($q7_D?1:0)>><<set $totalCorrect+=_correct>><<set $totalPossible+=1>><<set $totalIncorrect+=_incorrect>>
+Model answer: C. Beta-oxidation of fatty acids.
+Beta-oxidation occurs mainly in mitochondria, where fatty acyl chains are degraded to acetyl-CoA, NADH, and FADH2. Fatty acid synthesis and malonyl-CoA formation are cytosolic processes, and the pentose phosphate pathway occurs in the cytosol. Mitochondrial beta-oxidation is central to energy production during fasting.
+You correctly identified _correct of 1 correct answers. Missed <<=1-_correct>> correct answers. Selected _incorrect incorrect answers.
+[[Next->Q8]]
+
+:: Q8
+Which are important features of fatty acid synthesis?
+<<checkbox "$q8_A" false true>> A. It occurs in the cytosol
+<<checkbox "$q8_B" false true>> B. It requires NADPH
+<<checkbox "$q8_C" false true>> C. It occurs only in the nucleus
+<<checkbox "$q8_D" false true>> D. It directly generates large amounts of ATP
+<<button "Submit">><<goto "F8">><</button>>
+
+:: F8
+<<set _correct=($q8_A?1:0)+($q8_B?1:0)>><<set _incorrect=($q8_C?1:0)+($q8_D?1:0)>><<set $totalCorrect+=_correct>><<set $totalPossible+=2>><<set $totalIncorrect+=_incorrect>>
+Model answer: A. It occurs in the cytosol; B. It requires NADPH.
+Fatty acid synthesis in animal cells occurs in the cytosol and consumes NADPH during reductive elongation reactions catalysed by fatty acid synthase. It is not restricted to the nucleus and does not directly produce ATP. Instead, it uses cellular energy and reducing power to build long-chain fatty acids.
+You correctly identified _correct of 2 correct answers. Missed <<=2-_correct>> correct answers. Selected _incorrect incorrect answers.
+[[Next->Q9]]
+
+:: Q9
+During fatty acid synthesis, which molecule serves as the dedicated carbon donor for chain elongation?
+<<checkbox "$q9_A" false true>> A. Citrate
+<<checkbox "$q9_B" false true>> B. Acetyl-CoA
+<<checkbox "$q9_C" false true>> C. Ribose-5-phosphate
+<<checkbox "$q9_D" false true>> D. Malonyl-CoA
+<<button "Submit">><<goto "F9">><</button>>
+
+:: F9
+<<set _correct=($q9_D?1:0)>><<set _incorrect=($q9_A?1:0)+($q9_B?1:0)+($q9_C?1:0)>><<set $totalCorrect+=_correct>><<set $totalPossible+=1>><<set $totalIncorrect+=_incorrect>>
+Model answer: D. Malonyl-CoA.
+Malonyl-CoA is the activated two-carbon donor used repeatedly for fatty acid chain elongation. Although acetyl-CoA provides the initial primer and citrate exports carbon from mitochondria, neither functions as the dedicated elongation substrate. Ribose-5-phosphate is involved in nucleotide metabolism rather than lipid biosynthesis.
+You correctly identified _correct of 1 correct answers. Missed <<=1-_correct>> correct answers. Selected _incorrect incorrect answers.
+[[Next->Q10]]
+
+:: Q10
+A lipid identified as PC(16:0/18:1(9Z)) belongs to which class?
+<<checkbox "$q10_A" false true>> A. Triacylglycerols
+<<checkbox "$q10_B" false true>> B. Glycerophospholipids
+<<checkbox "$q10_C" false true>> C. Sphingomyelins
+<<checkbox "$q10_D" false true>> D. Steroid hormones
+<<button "Submit">><<goto "F10">><</button>>
+
+:: F10
+<<set _correct=($q10_B?1:0)>><<set _incorrect=($q10_A?1:0)+($q10_C?1:0)+($q10_D?1:0)>><<set $totalCorrect+=_correct>><<set $totalPossible+=1>><<set $totalIncorrect+=_incorrect>>
+Model answer: B. Glycerophospholipids.
+The abbreviation PC denotes phosphatidylcholine, a glycerophospholipid containing a glycerol backbone, phosphate group, choline head group, and specified fatty acyl chains. Triacylglycerols are storage lipids, sphingomyelins contain sphingosine, and steroid hormones derive from sterol structures. Glycerophospholipids are major components of biological membranes.
+You correctly identified _correct of 1 correct answers. Missed <<=1-_correct>> correct answers. Selected _incorrect incorrect answers.
+[[Next->Summary]]
+
+:: Summary
+<<set $adjusted = Math.max(0, $totalCorrect - (0.5 * $totalIncorrect))>>
+<<set $percent = (($adjusted / $totalPossible) * 100).toFixed(1)>>
+Total correctly identified answers: $totalCorrect
+Total possible correct answers: $totalPossible
+Penalty-adjusted marks: $adjusted
+Overall percentage: $percent%
