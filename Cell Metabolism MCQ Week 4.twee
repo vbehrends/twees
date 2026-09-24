@@ -1,0 +1,348 @@
+:: StoryTitle
+Cell Metabolism MCQ Week 4
+
+
+:: StoryData
+{
+  "ifid": "33333333-3333-3333-3333-333333333333",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: F1 {"position":"275,25","size":"100,100"}
+Model answer: B (Warburg effect)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>B (Warburg effect)<</if>>
+
+**Incorrect selections**
+<<if $_1a>>* A (Pasteur effect)<</if>>
+<<if $_1c>>* C (Cori cycle)<</if>>
+<<if $_1d>>* D (Crabtree effect)<</if>>
+<<if $_w == 0>>None<</if>>
+
+The Warburg effect describes aerobic glycolysis, where many cancer cells convert glucose to lactate despite oxygen availability. This supports biosynthetic demands and redox balance. The Pasteur effect is inhibition of glycolysis by oxygen, the Cori cycle transfers lactate between tissues and liver, and the Crabtree effect refers to glucose-mediated suppression of respiration in some systems.
+
+[[Continue->Q2]]
+
+
+:: F10 {"position":"25,275","size":"100,100"}
+Model answer: C (High PEPCK activity converting oxaloacetate to PEP)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>C (High PEPCK activity converting oxaloacetate to PEP)<</if>>
+
+**Incorrect selections**
+<<if $_10a>>* A (High PDH, low PEPCK)<</if>>
+<<if $_10b>>* B (High LDH, low PEPCK)<</if>>
+<<if $_10d>>* D (High citrate lyase activity converting citrate to acetyl-CoA)<</if>>
+<<if $_w == 0>>None<</if>>
+
+High PEPCK activity promotes conversion of oxaloacetate to phosphoenolpyruvate, directing TCA-cycle carbon toward gluconeogenesis and net glucose production. High pyruvate dehydrogenase favours oxidation, high lactate dehydrogenase favours lactate production, and citrate lyase supports lipid synthesis rather than glucose formation.
+
+[[Continue->Summary]]
+
+
+:: F2 {"position":"525,25","size":"100,100"}
+Model answer: C (Lactate dehydrogenase)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>C (Lactate dehydrogenase)<</if>>
+
+**Incorrect selections**
+<<if $_2a>>* A (Pyruvate dehydrogenase)<</if>>
+<<if $_2b>>* B (Citrate synthase)<</if>>
+<<if $_2d>>* D (PEP carboxykinase)<</if>>
+<<if $_w == 0>>None<</if>>
+
+Lactate dehydrogenase regenerates NAD+ by reducing pyruvate to lactate and oxidising NADH. This allows glycolysis to continue when rapid NAD+ recycling is required. Pyruvate dehydrogenase links glycolysis to the TCA cycle, citrate synthase forms citrate, and PEP carboxykinase functions in gluconeogenesis rather than fermentation.
+
+[[Continue->Q3]]
+
+
+:: F3 {"position":"775,25","size":"100,100"}
+Model answer: B (Glutamine)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>B (Glutamine)<</if>>
+
+**Incorrect selections**
+<<if $_3a>>* A (Alanine)<</if>>
+<<if $_3c>>* C (Glycine)<</if>>
+<<if $_3d>>* D (Serine)<</if>>
+<<if $_w == 0>>None<</if>>
+
+Glutamine is a major anaplerotic substrate in many tumours. It can be converted to glutamate and then alpha-ketoglutarate to replenish TCA cycle intermediates diverted into biosynthesis. Alanine, glycine and serine contribute to metabolism but are not the principal TCA-cycle replenishing amino acid discussed in cancer metabolism.
+
+[[Continue->Q4]]
+
+
+:: F4 {"position":"1025,25","size":"100,100"}
+Model answer: B (Become self-sufficient in growth signals)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>B (Become self-sufficient in growth signals)<</if>>
+
+**Incorrect selections**
+<<if $_4a>>* A (Require fewer ribosomes)<</if>>
+<<if $_4c>>* C (Stop taking up glucose)<</if>>
+<<if $_4d>>* D (Depend entirely on endocrine signals)<</if>>
+<<if $_w == 0>>None<</if>>
+
+Autocrine signalling enables cancer cells to produce and respond to their own growth factors, helping them become self-sufficient in growth signals. This promotes proliferation and survival. The process does not reduce ribosome requirements, halt glucose uptake, or make cells exclusively dependent on endocrine regulation.
+
+[[Continue->Q5]]
+
+
+:: F5 {"position":"25,150","size":"100,100"}
+Model answer: D (2-hydroxyglutarate)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>D (2-hydroxyglutarate)<</if>>
+
+**Incorrect selections**
+<<if $_5a>>* A (Succinate)<</if>>
+<<if $_5b>>* B (Fumarate)<</if>>
+<<if $_5c>>* C (Lactate)<</if>>
+<<if $_w == 0>>None<</if>>
+
+Mutant IDH1 produces 2-hydroxyglutarate, an oncometabolite that alters the activity of alpha-ketoglutarate-dependent enzymes and contributes to tumour development. Succinate and fumarate can act as oncometabolites in other contexts, while lactate is not the specific product generated by mutant IDH1.
+
+[[Continue->Q6]]
+
+
+:: F6 {"position":"275,150","size":"100,100"}
+Model answer: B (Oxaloacetate to phosphoenolpyruvate)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>B (Oxaloacetate to phosphoenolpyruvate)<</if>>
+
+**Incorrect selections**
+<<if $_6a>>* A (Pyruvate to oxaloacetate)<</if>>
+<<if $_6c>>* C (Citrate to acetyl-CoA)<</if>>
+<<if $_6d>>* D (Phosphoenolpyruvate to pyruvate)<</if>>
+<<if $_w == 0>>None<</if>>
+
+PEP carboxykinase converts oxaloacetate to phosphoenolpyruvate during gluconeogenesis. This bypasses an irreversible glycolytic step and helps channel carbon toward glucose synthesis. Pyruvate carboxylase catalyses pyruvate to oxaloacetate, while the other options describe different metabolic reactions.
+
+[[Continue->Q7]]
+
+
+:: F7 {"position":"525,150","size":"100,100"}
+Model answer: D (Contributes to an environment less favourable for immune cells)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>D (Contributes to an environment less favourable for immune cells)<</if>>
+
+**Incorrect selections**
+<<if $_7a>>* A (Increases ATP yield per glucose)<</if>>
+<<if $_7b>>* B (Raises extracellular pH)<</if>>
+<<if $_7c>>* C (Improves immune cell function)<</if>>
+<<if $_w == 0>>None<</if>>
+
+High lactate production can acidify the tumour microenvironment and contribute to conditions that are less favourable for effective immune-cell activity. Fermentation does not increase ATP yield per glucose molecule, extracellular pH generally falls rather than rises, and immune function is often impaired rather than improved.
+
+[[Continue->Q8]]
+
+
+:: F8 {"position":"775,150","size":"100,100"}
+Model answer: A (Increase glutamine utilisation)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>A (Increase glutamine utilisation)<</if>>
+
+**Incorrect selections**
+<<if $_8b>>* B (Increase glycogen synthesis)<</if>>
+<<if $_8c>>* C (Block glycolysis)<</if>>
+<<if $_8d>>* D (Convert lactate directly into citrate)<</if>>
+<<if $_w == 0>>None<</if>>
+
+Cancer cells frequently increase glutamine utilisation to maintain TCA cycle carbon pools. Glutamine-derived alpha-ketoglutarate replenishes intermediates removed for nucleotide, lipid and biomass production. Greater glycogen synthesis, blocking glycolysis, or direct lactate-to-citrate conversion would not provide equivalent anaplerotic support.
+
+[[Continue->Q9]]
+
+
+:: F9 {"position":"1025,150","size":"100,100"}
+Model answer: A (NADPH)
+
+You correctly identified <<print $_c>> of 1 correct answers.
+You missed <<print $_m>> correct answers.
+You selected <<print $_w>> incorrect answers.
+
+**Missed correct answers**
+<<if $_m == 0>>None<<else>>A (NADPH)<</if>>
+
+**Incorrect selections**
+<<if $_9b>>* B (FADH2)<</if>>
+<<if $_9c>>* C (GDP)<</if>>
+<<if $_9d>>* D (Coenzyme Q)<</if>>
+<<if $_w == 0>>None<</if>>
+
+Fatty-acid synthesis requires large amounts of NADPH as reducing power. Consequently, pathways such as the pentose phosphate pathway become important sources of reducing equivalents. FADH2, GDP and coenzyme Q are important metabolites but are not the major requirement of fatty-acid synthase.
+
+[[Continue->Q10]]
+
+
+:: Q1 {"position":"150,25","size":"100,100"}
+Which metabolic phenomenon describes lactate production by cancer cells despite adequate oxygen availability?
+
+<<checkbox "$_1a" false true>> (a) Pasteur effect
+<<checkbox "$_1b" false true>> (b) Warburg effect
+<<checkbox "$_1c" false true>> (c) Cori cycle
+<<checkbox "$_1d" false true>> (d) Crabtree effect
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_1b>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_1a>><<set $_w +=1>><</if>><<if $_1c>><<set $_w +=1>><</if>><<if $_1d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F1">><</button>>
+
+
+:: Q10 {"position":"1150,150","size":"100,100"}
+Which combination would most strongly favour net glucose production from surplus TCA cycle carbon?
+
+<<checkbox "$_10a" false true>> (a) High PDH, low PEPCK
+<<checkbox "$_10b" false true>> (b) High LDH, low PEPCK
+<<checkbox "$_10c" false true>> (c) High PEPCK activity converting oxaloacetate to PEP
+<<checkbox "$_10d" false true>> (d) High citrate lyase activity converting citrate to acetyl-CoA
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_10c>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_10a>><<set $_w +=1>><</if>><<if $_10b>><<set $_w +=1>><</if>><<if $_10d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F10">><</button>>
+
+
+:: Q2 {"position":"400,25","size":"100,100"}
+Which enzyme regenerates NAD+ during lactate fermentation in mammalian cells?
+
+<<checkbox "$_2a" false true>> (a) Pyruvate dehydrogenase
+<<checkbox "$_2b" false true>> (b) Citrate synthase
+<<checkbox "$_2c" false true>> (c) Lactate dehydrogenase
+<<checkbox "$_2d" false true>> (d) PEP carboxykinase
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_2c>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_2a>><<set $_w +=1>><</if>><<if $_2b>><<set $_w +=1>><</if>><<if $_2d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F2">><</button>>
+
+
+:: Q3 {"position":"650,25","size":"100,100"}
+Cancer cells often become highly dependent on uptake of which amino acid to replenish TCA cycle intermediates?
+
+<<checkbox "$_3a" false true>> (a) Alanine
+<<checkbox "$_3b" false true>> (b) Glutamine
+<<checkbox "$_3c" false true>> (c) Glycine
+<<checkbox "$_3d" false true>> (d) Serine
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_3b>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_3a>><<set $_w +=1>><</if>><<if $_3c>><<set $_w +=1>><</if>><<if $_3d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F3">><</button>>
+
+
+:: Q4 {"position":"900,25","size":"100,100"}
+A major consequence of autocrine signalling in cancer cells is that they:
+
+<<checkbox "$_4a" false true>> (a) Require fewer ribosomes
+<<checkbox "$_4b" false true>> (b) Become self-sufficient in growth signals
+<<checkbox "$_4c" false true>> (c) Stop taking up glucose
+<<checkbox "$_4d" false true>> (d) Depend entirely on endocrine signals
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_4b>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_4a>><<set $_w +=1>><</if>><<if $_4c>><<set $_w +=1>><</if>><<if $_4d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F4">><</button>>
+
+
+:: Q5 {"position":"1150,25","size":"100,100"}
+Which metabolite is produced by mutant IDH1 and acts as an oncometabolite?
+
+<<checkbox "$_5a" false true>> (a) Succinate
+<<checkbox "$_5b" false true>> (b) Fumarate
+<<checkbox "$_5c" false true>> (c) Lactate
+<<checkbox "$_5d" false true>> (d) 2-hydroxyglutarate
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_5d>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_5a>><<set $_w +=1>><</if>><<if $_5b>><<set $_w +=1>><</if>><<if $_5c>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F5">><</button>>
+
+
+:: Q6 {"position":"150,150","size":"100,100"}
+In gluconeogenesis, PEP carboxykinase catalyses the conversion of:
+
+<<checkbox "$_6a" false true>> (a) Pyruvate to oxaloacetate
+<<checkbox "$_6b" false true>> (b) Oxaloacetate to phosphoenolpyruvate
+<<checkbox "$_6c" false true>> (c) Citrate to acetyl-CoA
+<<checkbox "$_6d" false true>> (d) Phosphoenolpyruvate to pyruvate
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_6b>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_6a>><<set $_w +=1>><</if>><<if $_6c>><<set $_w +=1>><</if>><<if $_6d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F6">><</button>>
+
+
+:: Q7 {"position":"400,150","size":"100,100"}
+One proposed advantage of high lactate production by tumours is that it:
+
+<<checkbox "$_7a" false true>> (a) Increases ATP yield per glucose
+<<checkbox "$_7b" false true>> (b) Raises extracellular pH
+<<checkbox "$_7c" false true>> (c) Improves immune cell function
+<<checkbox "$_7d" false true>> (d) Contributes to an environment less favourable for immune cells
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_7d>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_7a>><<set $_w +=1>><</if>><<if $_7b>><<set $_w +=1>><</if>><<if $_7c>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F7">><</button>>
+
+
+:: Q8 {"position":"650,150","size":"100,100"}
+If glucose-derived carbon is diverted into lactate, nucleotides and fatty acids, how do many cancer cells help maintain TCA cycle carbon pools?
+
+<<checkbox "$_8a" false true>> (a) Increase glutamine utilisation
+<<checkbox "$_8b" false true>> (b) Increase glycogen synthesis
+<<checkbox "$_8c" false true>> (c) Block glycolysis
+<<checkbox "$_8d" false true>> (d) Convert lactate directly into citrate
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_8a>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_8b>><<set $_w +=1>><</if>><<if $_8c>><<set $_w +=1>><</if>><<if $_8d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F8">><</button>>
+
+
+:: Q9 {"position":"900,150","size":"100,100"}
+According to the lecture, synthesis of fatty acids in proliferating cancer cells creates a challenge because fatty acid synthase requires large amounts of:
+
+<<checkbox "$_9a" false true>> (a) NADPH
+<<checkbox "$_9b" false true>> (b) FADH2
+<<checkbox "$_9c" false true>> (c) GDP
+<<checkbox "$_9d" false true>> (d) Coenzyme Q
+
+<<button "Submit">><<set $_c=0>><<set $_m=0>><<set $_w=0>><<if $_9a>><<set $_c=1>><<else>><<set $_m=1>><</if>><<if $_9b>><<set $_w +=1>><</if>><<if $_9c>><<set $_w +=1>><</if>><<if $_9d>><<set $_w +=1>><</if>><<set $totalCorrect += $_c>><<set $incorrectSelections += $_w>><<goto "F9">><</button>>
+
+
+:: Start {"position":"25,25","size":"100,100"}
+<<set $totalCorrect=0>><<set $totalPossible=10>><<set $incorrectSelections=0>>
+[[Begin->Q1]]
+
+
+:: Summary {"position":"150,275","size":"100,100"}
+<<set $adjusted = $totalCorrect - (0.5 * $incorrectSelections)>><<if $adjusted < 0>><<set $adjusted = 0>><</if>><<set $pct = (($adjusted / $totalPossible) * 100)>>
+Total correctly identified answers: <<print $totalCorrect>>
+
+Total possible correct answers: <<print $totalPossible>>
+
+Penalty-adjusted marks: <<print $adjusted>>
+
+Overall percentage: <<print $pct.toFixed(1)>>%
