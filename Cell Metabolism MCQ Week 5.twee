@@ -1,0 +1,349 @@
+:: StoryTitle
+Untitled Story
+
+
+:: StoryData
+{
+  "ifid": "12345678-1234-1234-1234-123456789012",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: F1 {"position":"275,25","size":"100,100"}
+Model answer: B. Methionine
+
+You correctly identified <<print $corr1>> of 1 correct answers.<br>
+You missed <<print $miss1>> correct answers.<br>
+You selected <<print $bad1>> incorrect answers.
+
+Missed correct answers: <<if $missList1 neq "">><<print $missList1>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList1 neq "">><<print $badList1>><<else>>None<</if>>
+
+Methionine is often the first limiting amino acid in grain based poultry diets because cereal proteins contain relatively low methionine concentrations. Adequate methionine is required for protein synthesis and methyl group metabolism. Lysine can also become limiting but is commonly second. Leucine and histidine are not usually the primary limitation in grain-fed chickens. The issue reflects amino acid balance rather than energy metabolism.
+
+[[Continue->Q2]]
+
+
+:: F10 {"position":"25,275","size":"100,100"}
+Model answer: C. Incorporation into uric acid
+
+You correctly identified <<print $corr10>> of 1 correct answers.<br>
+You missed <<print $miss10>> correct answers.<br>
+You selected <<print $bad10>> incorrect answers.
+
+Missed correct answers: <<if $missList10 neq "">><<print $missList10>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList10 neq "">><<print $badList10>><<else>>None<</if>>
+
+Birds primarily dispose of excess nitrogen by incorporating it into uric acid, which conserves water during excretion. Conversion to ketone bodies and glutamate are not disposal routes, and excretion as ammonia is characteristic of many aquatic organisms rather than chickens. Nitrogen metabolism therefore differs between birds and mammals, with uric acid synthesis serving as the major endpoint.
+
+[[Continue->Summary]]
+
+
+:: F2 {"position":"525,25","size":"100,100"}
+Model answer: C. Their synthesis requires inputs from both glycolysis and the pentose phosphate pathway
+
+You correctly identified <<print $corr2>> of 1 correct answers.<br>
+You missed <<print $miss2>> correct answers.<br>
+You selected <<print $bad2>> incorrect answers.
+
+Missed correct answers: <<if $missList2 neq "">><<print $missList2>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList2 neq "">><<print $badList2>><<else>>None<</if>>
+
+Aromatic amino acids arise through pathways that draw carbon from glycolysis and the pentose phosphate pathway. Their biosynthesis therefore requires substantial precursor investment and metabolic coordination. They are not confined to mitochondria, do not specifically depend on ATP from fatty acid oxidation, and are not called expensive simply because plants synthesise them. The shikimate pathway integrates central carbon metabolism to generate aromatic structures.
+
+[[Continue->Q3]]
+
+
+:: F3 {"position":"775,25","size":"100,100"}
+Model answer: A. Alanine
+
+You correctly identified <<print $corr3>> of 1 correct answers.<br>
+You missed <<print $miss3>> correct answers.<br>
+You selected <<print $bad3>> incorrect answers.
+
+Missed correct answers: <<if $missList3 neq "">><<print $missList3>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList3 neq "">><<print $badList3>><<else>>None<</if>>
+
+Alanine is directly connected to pyruvate by alanine aminotransferase. Transamination readily interconverts these compounds and links amino acid and carbohydrate metabolism. Glutamate is more closely related to α-ketoglutarate, while aspartate is linked to oxaloacetate. Histidine follows a different biosynthetic and catabolic route. This reaction helps redistribute nitrogen while maintaining carbon skeleton flow between pathways.
+
+[[Continue->Q4]]
+
+
+:: F4 {"position":"1025,25","size":"100,100"}
+Model answer: D. It cannot be synthesised by the organism and must be obtained from food
+
+You correctly identified <<print $corr4>> of 1 correct answers.<br>
+You missed <<print $miss4>> correct answers.<br>
+You selected <<print $bad4>> incorrect answers.
+
+Missed correct answers: <<if $missList4 neq "">><<print $missList4>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList4 neq "">><<print $badList4>><<else>>None<</if>>
+
+An essential amino acid cannot be synthesised in sufficient quantities by the organism and must come from the diet. Essentiality is not restricted to growth, liver metabolism, or production by gut microbes. Nutritional requirements reflect the absence of complete biosynthetic pathways. Amino acid metabolism therefore depends on dietary supply for certain compounds while nonessential amino acids can be produced internally.
+
+[[Continue->Q5]]
+
+
+:: F5 {"position":"25,150","size":"100,100"}
+Model answer: C. Corynebacterium glutamicum
+
+You correctly identified <<print $corr5>> of 1 correct answers.<br>
+You missed <<print $miss5>> correct answers.<br>
+You selected <<print $bad5>> incorrect answers.
+
+Missed correct answers: <<if $missList5 neq "">><<print $missList5>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList5 neq "">><<print $badList5>><<else>>None<</if>>
+
+Corynebacterium glutamicum is a major industrial organism used for commercial glutamate production because its metabolism can be directed toward amino acid overproduction. Escherichia coli, Saccharomyces cerevisiae, and Bacillus subtilis have many industrial uses but are not the classic glutamate production platform. The process exploits carbon flux, nitrogen assimilation, and regulatory controls of amino acid biosynthesis pathways.
+
+[[Continue->Q6]]
+
+
+:: F6 {"position":"275,150","size":"100,100"}
+Model answer: A. Leucine
+
+You correctly identified <<print $corr6>> of 1 correct answers.<br>
+You missed <<print $miss6>> correct answers.<br>
+You selected <<print $bad6>> incorrect answers.
+
+Missed correct answers: <<if $missList6 neq "">><<print $missList6>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList6 neq "">><<print $badList6>><<else>>None<</if>>
+
+Leucine is a branched chain amino acid that strongly activates mTOR signalling and promotes muscle protein synthesis. Glycine, aspartate, and serine have important metabolic roles but are not the principal amino acid signal for this pathway. mTOR integrates nutrient availability with anabolic metabolism, coordinating translation, growth, and protein accumulation in response to amino acid status.
+
+[[Continue->Q7]]
+
+
+:: F7 {"position":"525,150","size":"100,100"}
+Model answer: D. The urea cycle
+
+You correctly identified <<print $corr7>> of 1 correct answers.<br>
+You missed <<print $miss7>> correct answers.<br>
+You selected <<print $bad7>> incorrect answers.
+
+Missed correct answers: <<if $missList7 neq "">><<print $missList7>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList7 neq "">><<print $badList7>><<else>>None<</if>>
+
+The urea cycle is the primary route for disposal of excess nitrogen in mammals. Amino acid catabolism generates ammonia that is converted into urea for safe excretion. The pentose phosphate pathway, TCA cycle, and fatty acid synthesis serve different metabolic functions and do not perform nitrogen disposal. This illustrates the integration of amino acid degradation with specialised nitrogen handling mechanisms.
+
+[[Continue->Q8]]
+
+
+:: F8 {"position":"775,150","size":"100,100"}
+Model answer: B. Glutamate
+
+You correctly identified <<print $corr8>> of 1 correct answers.<br>
+You missed <<print $miss8>> correct answers.<br>
+You selected <<print $bad8>> incorrect answers.
+
+Missed correct answers: <<if $missList8 neq "">><<print $missList8>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList8 neq "">><<print $badList8>><<else>>None<</if>>
+
+Glutamate is the key ligand for umami receptors and produces a stronger umami signal than inosinate or guanylate alone, although nucleotides can enhance the response synergistically. Citrate, lactate, and urea are not principal umami receptor ligands. Glutamate occupies a central position in amino acid metabolism, nitrogen transfer reactions, and flavour perception derived from protein-rich foods.
+
+[[Continue->Q9]]
+
+
+:: F9 {"position":"1025,150","size":"100,100"}
+Model answer: C. Transamination
+
+You correctly identified <<print $corr9>> of 1 correct answers.<br>
+You missed <<print $miss9>> correct answers.<br>
+You selected <<print $bad9>> incorrect answers.
+
+Missed correct answers: <<if $missList9 neq "">><<print $missList9>><<else>>None<</if>><br>
+Incorrect selections: <<if $badList9 neq "">><<print $badList9>><<else>>None<</if>>
+
+Transamination connects amino acid metabolism with both nitrogen and carbon metabolism by transferring amino groups between amino acids and keto acids. This process links compounds such as pyruvate, oxaloacetate, and α-ketoglutarate to amino acid pools. β-oxidation, translation, and glycolysis have important functions but do not provide this direct integration of nitrogen handling with carbon skeleton interconversion.
+
+[[Continue->Q10]]
+
+
+:: Q1 {"position":"150,25","size":"100,100"}
+Which amino acid is commonly the first limiting amino acid in grain-fed chickens?
+
+Select all that apply.
+<<checkbox "$Q1_A" false true>> A. Lysine<br>
+<<checkbox "$Q1_B" false true>> B. Methionine<br>
+<<checkbox "$Q1_C" false true>> C. Leucine<br>
+<<checkbox "$Q1_D" false true>> D. Histidine<br>
+<<button "Submit">>
+<<set $corr1=0>><<set $miss1=0>><<set $bad1=0>><<set $missList1="">><<set $badList1="">>
+<<if $Q1_A>><<set $bad1 += 1>><<set $badList1 += "A. Lysine; ">><</if>>
+<<if $Q1_B>><<set $corr1 += 1>><<else>><<set $miss1 += 1>><<set $missList1 += "B. Methionine; ">><</if>>
+<<if $Q1_C>><<set $bad1 += 1>><<set $badList1 += "C. Leucine; ">><</if>>
+<<if $Q1_D>><<set $bad1 += 1>><<set $badList1 += "D. Histidine; ">><</if>>
+<<set $totalCorrect += $corr1>><<set $possible += 1>><<set $incorrect += $bad1>><<goto "F1">><</button>>
+
+
+:: Q10 {"position":"1150,150","size":"100,100"}
+How is excess nitrogen primarily disposed of in chickens?
+
+Select all that apply.
+<<checkbox "$Q10_A" false true>> A. Conversion to ketone bodies<br>
+<<checkbox "$Q10_B" false true>> B. Excretion as ammonia<br>
+<<checkbox "$Q10_C" false true>> C. Incorporation into uric acid<br>
+<<checkbox "$Q10_D" false true>> D. Conversion to glutamate<br>
+<<button "Submit">>
+<<set $corr10=0>><<set $miss10=0>><<set $bad10=0>><<set $missList10="">><<set $badList10="">>
+<<if $Q10_A>><<set $bad10 += 1>><<set $badList10 += "A. Conversion to ketone bodies; ">><</if>>
+<<if $Q10_B>><<set $bad10 += 1>><<set $badList10 += "B. Excretion as ammonia; ">><</if>>
+<<if $Q10_C>><<set $corr10 += 1>><<else>><<set $miss10 += 1>><<set $missList10 += "C. Incorporation into uric acid; ">><</if>>
+<<if $Q10_D>><<set $bad10 += 1>><<set $badList10 += "D. Conversion to glutamate; ">><</if>>
+<<set $totalCorrect += $corr10>><<set $possible += 1>><<set $incorrect += $bad10>><<goto "F10">><</button>>
+
+
+:: Q2 {"position":"400,25","size":"100,100"}
+Why are aromatic amino acids considered metabolically expensive to synthesise?
+
+Select all that apply.
+<<checkbox "$Q2_A" false true>> A. They are produced only in mitochondria<br>
+<<checkbox "$Q2_B" false true>> B. They require ATP from fatty acid oxidation<br>
+<<checkbox "$Q2_C" false true>> C. Their synthesis requires inputs from both glycolysis and the pentose phosphate pathway<br>
+<<checkbox "$Q2_D" false true>> D. They can only be synthesised in plants<br>
+<<button "Submit">>
+<<set $corr2=0>><<set $miss2=0>><<set $bad2=0>><<set $missList2="">><<set $badList2="">>
+<<if $Q2_A>><<set $bad2 += 1>><<set $badList2 += "A. They are produced only in mitochondria; ">><</if>>
+<<if $Q2_B>><<set $bad2 += 1>><<set $badList2 += "B. They require ATP from fatty acid oxidation; ">><</if>>
+<<if $Q2_C>><<set $corr2 += 1>><<else>><<set $miss2 += 1>><<set $missList2 += "C. Their synthesis requires inputs from both glycolysis and the pentose phosphate pathway; ">><</if>>
+<<if $Q2_D>><<set $bad2 += 1>><<set $badList2 += "D. They can only be synthesised in plants; ">><</if>>
+<<set $totalCorrect += $corr2>><<set $possible += 1>><<set $incorrect += $bad2>><<goto "F2">><</button>>
+
+
+:: Q3 {"position":"650,25","size":"100,100"}
+Which amino acid is directly linked to pyruvate through transamination?
+
+Select all that apply.
+<<checkbox "$Q3_A" false true>> A. Alanine<br>
+<<checkbox "$Q3_B" false true>> B. Glutamate<br>
+<<checkbox "$Q3_C" false true>> C. Aspartate<br>
+<<checkbox "$Q3_D" false true>> D. Histidine<br>
+<<button "Submit">>
+<<set $corr3=0>><<set $miss3=0>><<set $bad3=0>><<set $missList3="">><<set $badList3="">>
+<<if $Q3_A>><<set $corr3 += 1>><<else>><<set $miss3 += 1>><<set $missList3 += "A. Alanine; ">><</if>>
+<<if $Q3_B>><<set $bad3 += 1>><<set $badList3 += "B. Glutamate; ">><</if>>
+<<if $Q3_C>><<set $bad3 += 1>><<set $badList3 += "C. Aspartate; ">><</if>>
+<<if $Q3_D>><<set $bad3 += 1>><<set $badList3 += "D. Histidine; ">><</if>>
+<<set $totalCorrect += $corr3>><<set $possible += 1>><<set $incorrect += $bad3>><<goto "F3">><</button>>
+
+
+:: Q4 {"position":"900,25","size":"100,100"}
+Which statement best describes an essential amino acid?
+
+Select all that apply.
+<<checkbox "$Q4_A" false true>> A. It can only be synthesised in the liver<br>
+<<checkbox "$Q4_B" false true>> B. It is required solely during growth<br>
+<<checkbox "$Q4_C" false true>> C. It is produced by gut bacteria<br>
+<<checkbox "$Q4_D" false true>> D. It cannot be synthesised by the organism and must be obtained from food<br>
+<<button "Submit">>
+<<set $corr4=0>><<set $miss4=0>><<set $bad4=0>><<set $missList4="">><<set $badList4="">>
+<<if $Q4_A>><<set $bad4 += 1>><<set $badList4 += "A. It can only be synthesised in the liver; ">><</if>>
+<<if $Q4_B>><<set $bad4 += 1>><<set $badList4 += "B. It is required solely during growth; ">><</if>>
+<<if $Q4_C>><<set $bad4 += 1>><<set $badList4 += "C. It is produced by gut bacteria; ">><</if>>
+<<if $Q4_D>><<set $corr4 += 1>><<else>><<set $miss4 += 1>><<set $missList4 += "D. It cannot be synthesised by the organism and must be obtained from food; ">><</if>>
+<<set $totalCorrect += $corr4>><<set $possible += 1>><<set $incorrect += $bad4>><<goto "F4">><</button>>
+
+
+:: Q5 {"position":"1150,25","size":"100,100"}
+Which microorganism is widely used for industrial glutamate production?
+
+Select all that apply.
+<<checkbox "$Q5_A" false true>> A. Escherichia coli<br>
+<<checkbox "$Q5_B" false true>> B. Saccharomyces cerevisiae<br>
+<<checkbox "$Q5_C" false true>> C. Corynebacterium glutamicum<br>
+<<checkbox "$Q5_D" false true>> D. Bacillus subtilis<br>
+<<button "Submit">>
+<<set $corr5=0>><<set $miss5=0>><<set $bad5=0>><<set $missList5="">><<set $badList5="">>
+<<if $Q5_A>><<set $bad5 += 1>><<set $badList5 += "A. Escherichia coli; ">><</if>>
+<<if $Q5_B>><<set $bad5 += 1>><<set $badList5 += "B. Saccharomyces cerevisiae; ">><</if>>
+<<if $Q5_C>><<set $corr5 += 1>><<else>><<set $miss5 += 1>><<set $missList5 += "C. Corynebacterium glutamicum; ">><</if>>
+<<if $Q5_D>><<set $bad5 += 1>><<set $badList5 += "D. Bacillus subtilis; ">><</if>>
+<<set $totalCorrect += $corr5>><<set $possible += 1>><<set $incorrect += $bad5>><<goto "F5">><</button>>
+
+
+:: Q6 {"position":"150,150","size":"100,100"}
+Which amino acid is particularly important for activating mTOR and stimulating muscle protein synthesis in mammals?
+
+Select all that apply.
+<<checkbox "$Q6_A" false true>> A. Leucine<br>
+<<checkbox "$Q6_B" false true>> B. Glycine<br>
+<<checkbox "$Q6_C" false true>> C. Aspartate<br>
+<<checkbox "$Q6_D" false true>> D. Serine<br>
+<<button "Submit">>
+<<set $corr6=0>><<set $miss6=0>><<set $bad6=0>><<set $missList6="">><<set $badList6="">>
+<<if $Q6_A>><<set $corr6 += 1>><<else>><<set $miss6 += 1>><<set $missList6 += "A. Leucine; ">><</if>>
+<<if $Q6_B>><<set $bad6 += 1>><<set $badList6 += "B. Glycine; ">><</if>>
+<<if $Q6_C>><<set $bad6 += 1>><<set $badList6 += "C. Aspartate; ">><</if>>
+<<if $Q6_D>><<set $bad6 += 1>><<set $badList6 += "D. Serine; ">><</if>>
+<<set $totalCorrect += $corr6>><<set $possible += 1>><<set $incorrect += $bad6>><<goto "F6">><</button>>
+
+
+:: Q7 {"position":"400,150","size":"100,100"}
+During amino acid catabolism, excess nitrogen in mammals is primarily disposed of through:
+
+Select all that apply.
+<<checkbox "$Q7_A" false true>> A. The pentose phosphate pathway<br>
+<<checkbox "$Q7_B" false true>> B. The TCA cycle<br>
+<<checkbox "$Q7_C" false true>> C. Fatty acid synthesis<br>
+<<checkbox "$Q7_D" false true>> D. The urea cycle<br>
+<<button "Submit">>
+<<set $corr7=0>><<set $miss7=0>><<set $bad7=0>><<set $missList7="">><<set $badList7="">>
+<<if $Q7_A>><<set $bad7 += 1>><<set $badList7 += "A. The pentose phosphate pathway; ">><</if>>
+<<if $Q7_B>><<set $bad7 += 1>><<set $badList7 += "B. The TCA cycle; ">><</if>>
+<<if $Q7_C>><<set $bad7 += 1>><<set $badList7 += "C. Fatty acid synthesis; ">><</if>>
+<<if $Q7_D>><<set $corr7 += 1>><<else>><<set $miss7 += 1>><<set $missList7 += "D. The urea cycle; ">><</if>>
+<<set $totalCorrect += $corr7>><<set $possible += 1>><<set $incorrect += $bad7>><<goto "F7">><</button>>
+
+
+:: Q8 {"position":"650,150","size":"100,100"}
+Which molecule is a stronger ligand for umami receptors than inosinate or guanylate?
+
+Select all that apply.
+<<checkbox "$Q8_A" false true>> A. Citrate<br>
+<<checkbox "$Q8_B" false true>> B. Glutamate<br>
+<<checkbox "$Q8_C" false true>> C. Lactate<br>
+<<checkbox "$Q8_D" false true>> D. Urea<br>
+<<button "Submit">>
+<<set $corr8=0>><<set $miss8=0>><<set $bad8=0>><<set $missList8="">><<set $badList8="">>
+<<if $Q8_A>><<set $bad8 += 1>><<set $badList8 += "A. Citrate; ">><</if>>
+<<if $Q8_B>><<set $corr8 += 1>><<else>><<set $miss8 += 1>><<set $missList8 += "B. Glutamate; ">><</if>>
+<<if $Q8_C>><<set $bad8 += 1>><<set $badList8 += "C. Lactate; ">><</if>>
+<<if $Q8_D>><<set $bad8 += 1>><<set $badList8 += "D. Urea; ">><</if>>
+<<set $totalCorrect += $corr8>><<set $possible += 1>><<set $incorrect += $bad8>><<goto "F8">><</button>>
+
+
+:: Q9 {"position":"900,150","size":"100,100"}
+Which process links amino acid metabolism to both nitrogen and carbon metabolism?
+
+Select all that apply.
+<<checkbox "$Q9_A" false true>> A. β-oxidation<br>
+<<checkbox "$Q9_B" false true>> B. Translation<br>
+<<checkbox "$Q9_C" false true>> C. Transamination<br>
+<<checkbox "$Q9_D" false true>> D. Glycolysis<br>
+<<button "Submit">>
+<<set $corr9=0>><<set $miss9=0>><<set $bad9=0>><<set $missList9="">><<set $badList9="">>
+<<if $Q9_A>><<set $bad9 += 1>><<set $badList9 += "A. β-oxidation; ">><</if>>
+<<if $Q9_B>><<set $bad9 += 1>><<set $badList9 += "B. Translation; ">><</if>>
+<<if $Q9_C>><<set $corr9 += 1>><<else>><<set $miss9 += 1>><<set $missList9 += "C. Transamination; ">><</if>>
+<<if $Q9_D>><<set $bad9 += 1>><<set $badList9 += "D. Glycolysis; ">><</if>>
+<<set $totalCorrect += $corr9>><<set $possible += 1>><<set $incorrect += $bad9>><<goto "F9">><</button>>
+
+
+:: Start {"position":"25,25","size":"100,100"}
+<<set $totalCorrect=0>><<set $possible=0>><<set $incorrect=0>>
+Welcome to the quiz. All questions are select all that apply.
+
+[[Begin->Q1]]
+
+
+:: Summary {"position":"150,275","size":"100,100"}
+<<set $adjusted = $totalCorrect - ($incorrect * 0.5)>>
+<<if $adjusted < 0>><<set $adjusted = 0>><</if>>
+<<set $percent = Math.round(($adjusted/$possible)*1000)/10>>
+Total correctly identified answers: <<print $totalCorrect>><br>
+Total possible correct answers: <<print $possible>><br>
+Penalty-adjusted marks: <<print $adjusted>><br>
+Overall percentage: <<print $percent>>%
