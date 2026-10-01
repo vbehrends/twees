@@ -1,0 +1,439 @@
+:: StoryTitle
+Cell Metabolism MCQ Week 6
+
+
+:: StoryData
+{
+  "ifid": "12345678-1234-1234-1234-123456789012",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: F1 {"position":"275,25","size":"100,100"}
+Model answer: b) Pancreas
+
+The pancreas contains beta cells in the islets of Langerhans that detect rising blood glucose and secrete insulin. Insulin coordinates whole body glucose uptake and storage. The liver responds to insulin but does not release it. Adrenal glands produce hormones such as adrenaline and cortisol, while kidneys regulate filtration and excretion. This endocrine control is central to metabolic homeostasis and postprandial glucose regulation.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q2]]
+
+
+:: F10 {"position":"25,275","size":"100,100"}
+Model answer: c) Enzyme → signalling pathway → cell → organ → whole organism
+
+Metabolic regulation operates across hierarchical levels. Enzyme activity influences signalling pathways, which affect cellular behaviour. Coordinated responses across cells contribute to organ function and ultimately whole organism physiology. The alternative sequences do not represent increasing biological scale or regulatory organisation. This hierarchy illustrates how molecular events propagate to systemic metabolic control.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Summary]]
+
+
+:: F2 {"position":"525,25","size":"100,100"}
+Model answer: c) Lactate fermentation
+
+When oxygen availability falls, glycolysis can continue if NAD+ is regenerated through lactate fermentation. Pyruvate is reduced to lactate by lactate dehydrogenase, allowing continued ATP production from glycolysis. Glycogen synthesis stores glucose rather than generating ATP, gluconeogenesis produces glucose, and ketogenesis occurs mainly in the liver. This adaptation supports short-term energy production during intense muscular activity.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q3]]
+
+
+:: F3 {"position":"775,25","size":"100,100"}
+Model answer: a) At a site distinct from the active site
+
+Allosteric regulators bind to a regulatory site separate from the enzyme active site. This interaction changes enzyme conformation and alters catalytic activity, providing rapid control of metabolic flux. Binding is not necessarily irreversible. Allosteric regulators generally act on proteins rather than exclusively on DNA, and they do not inherently bind ATP. Allosteric control is a major mechanism for coordinating pathway activity with cellular demand.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q4]]
+
+
+:: F4 {"position":"1025,25","size":"100,100"}
+Model answer: c) Transport of glucose transporters to the cell membrane
+
+Insulin stimulates signalling pathways that increase the movement of glucose transporters, especially GLUT4, to the plasma membrane in responsive tissues. This enhances glucose uptake from the circulation. Insulin generally promotes glycogen synthesis rather than glycogen breakdown, suppresses glucose release, and inhibits ketone body production. These actions help reduce blood glucose after feeding and support energy storage.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q5]]
+
+
+:: F5 {"position":"25,150","size":"100,100"}
+Model answer: b) Phosphorylation
+
+Phosphorylation involves addition of a phosphate group by protein kinases and is one of the most important mechanisms regulating enzyme activity. The modification can activate or inhibit target proteins depending on context. Ubiquitination often marks proteins for degradation, glycosylation adds carbohydrate groups, and replication is DNA duplication. Reversible phosphorylation enables rapid regulation of metabolism in response to hormones and nutrient status.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q6]]
+
+
+:: F6 {"position":"275,150","size":"100,100"}
+Model answer: c) Maintaining blood glucose levels
+
+During short-term fasting, the liver maintains blood glucose through glycogenolysis and increasingly through gluconeogenesis. This preserves glucose supply for tissues with high glucose requirements. Ketone production becomes more prominent during prolonged fasting. Cholesterol synthesis and fat storage are not the primary priorities during this period. Hepatic regulation is crucial for maintaining systemic energy balance between meals.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q7]]
+
+
+:: F7 {"position":"525,150","size":"100,100"}
+Model answer: d) cAMP
+
+cAMP is a classic second messenger generated from ATP by adenylyl cyclase. It transmits extracellular hormonal signals to intracellular targets, often through protein kinase A. Glycogen is a storage polysaccharide, DNA stores genetic information, and ATP serves mainly as an energy carrier and precursor. Second messenger systems allow amplification and regulation of metabolic signalling pathways.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q8]]
+
+
+:: F8 {"position":"775,150","size":"100,100"}
+Model answer: b) Insulin
+
+Pre-diabetes is characterised by reduced cellular responsiveness to insulin, a condition known as insulin resistance. As insulin signalling becomes less effective, glucose uptake and metabolic regulation are impaired. Glucagon has distinct physiological roles, while lactate and glycogen are metabolites rather than the primary signalling defect. Persistent insulin resistance increases the risk of progression to type 2 diabetes and associated metabolic disorders.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q9]]
+
+
+:: F9 {"position":"1025,150","size":"100,100"}
+Model answer: c) The product of energy-generating metabolism
+
+ATP reflects the cellular energy state and can act as a feedback signal when energy supplies are sufficient. By inhibiting components of energy-generating pathways, ATP helps match production with demand. ATP is not an oxygen substrate and is not a membrane receptor. This feedback regulation contributes to efficient control of oxidative phosphorylation and broader metabolic homeostasis.
+
+You correctly identified <<= $_correctCount>> of 1 correct answers.
+You missed <<= $_missed.length>> correct answers.
+You selected <<= $_wrong.length>> incorrect answers.
+
+Missed correct answers: <<= $_missed.length ? $_missed.join(", ") : "None">>
+
+Incorrect selections: <<= $_wrong.length ? $_wrong.join(", ") : "None">>
+
+
+[[Continue->Q10]]
+
+
+:: Q1 {"position":"150,25","size":"100,100"}
+Which organ releases insulin in response to elevated blood glucose?
+
+Select all that apply.
+<<set $_sel1 to []>>
+<<checkbox "$_s1_a" false true>> a) Liver<br>
+<<checkbox "$_s1_b" false true>> b) Pancreas<br>
+<<checkbox "$_s1_c" false true>> c) Adrenal gland<br>
+<<checkbox "$_s1_d" false true>> d) Kidney<br>
+
+<<button "Submit">>
+<<set $_sel1=[]>>
+<<if $_s1_a>><<run $_sel1.push("a")>><</if>>
+<<if $_s1_b>><<run $_sel1.push("b")>><</if>>
+<<if $_s1_c>><<run $_sel1.push("c")>><</if>>
+<<if $_s1_d>><<run $_sel1.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['b']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel1.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel1>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F1">>
+<</button>>
+
+
+:: Q10 {"position":"1150,150","size":"100,100"}
+Which sequence best represents metabolic regulation across increasing biological scale?
+
+Select all that apply.
+<<set $_sel10 to []>>
+<<checkbox "$_s10_a" false true>> a) Organ → tissue → enzyme → cell<br>
+<<checkbox "$_s10_b" false true>> b) Hormone → DNA → ATP → oxygen<br>
+<<checkbox "$_s10_c" false true>> c) Enzyme → signalling pathway → cell → organ → whole organism<br>
+<<checkbox "$_s10_d" false true>> d) Membrane → glycogen → glucose → lactate<br>
+
+<<button "Submit">>
+<<set $_sel10=[]>>
+<<if $_s10_a>><<run $_sel10.push("a")>><</if>>
+<<if $_s10_b>><<run $_sel10.push("b")>><</if>>
+<<if $_s10_c>><<run $_sel10.push("c")>><</if>>
+<<if $_s10_d>><<run $_sel10.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['c']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel10.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel10>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F10">>
+<</button>>
+
+
+:: Q2 {"position":"400,25","size":"100,100"}
+Which process allows ATP production to continue when oxygen is limited in muscle cells?
+
+Select all that apply.
+<<set $_sel2 to []>>
+<<checkbox "$_s2_a" false true>> a) Glycogen synthesis<br>
+<<checkbox "$_s2_b" false true>> b) Gluconeogenesis<br>
+<<checkbox "$_s2_c" false true>> c) Lactate fermentation<br>
+<<checkbox "$_s2_d" false true>> d) Ketogenesis<br>
+
+<<button "Submit">>
+<<set $_sel2=[]>>
+<<if $_s2_a>><<run $_sel2.push("a")>><</if>>
+<<if $_s2_b>><<run $_sel2.push("b")>><</if>>
+<<if $_s2_c>><<run $_sel2.push("c")>><</if>>
+<<if $_s2_d>><<run $_sel2.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['c']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel2.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel2>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F2">>
+<</button>>
+
+
+:: Q3 {"position":"650,25","size":"100,100"}
+Allosteric regulators bind:
+
+Select all that apply.
+<<set $_sel3 to []>>
+<<checkbox "$_s3_a" false true>> a) At a site distinct from the active site<br>
+<<checkbox "$_s3_b" false true>> b) Irreversibly to the active site<br>
+<<checkbox "$_s3_c" false true>> c) Only to DNA<br>
+<<checkbox "$_s3_d" false true>> d) Directly to ATP<br>
+
+<<button "Submit">>
+<<set $_sel3=[]>>
+<<if $_s3_a>><<run $_sel3.push("a")>><</if>>
+<<if $_s3_b>><<run $_sel3.push("b")>><</if>>
+<<if $_s3_c>><<run $_sel3.push("c")>><</if>>
+<<if $_s3_d>><<run $_sel3.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['a']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel3.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel3>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F3">>
+<</button>>
+
+
+:: Q4 {"position":"900,25","size":"100,100"}
+During normal glucose regulation, insulin promotes:
+
+Select all that apply.
+<<set $_sel4 to []>>
+<<checkbox "$_s4_a" false true>> a) Breakdown of glycogen<br>
+<<checkbox "$_s4_b" false true>> b) Release of glucose from cells<br>
+<<checkbox "$_s4_c" false true>> c) Transport of glucose transporters to the cell membrane<br>
+<<checkbox "$_s4_d" false true>> d) Ketone body production<br>
+
+<<button "Submit">>
+<<set $_sel4=[]>>
+<<if $_s4_a>><<run $_sel4.push("a")>><</if>>
+<<if $_s4_b>><<run $_sel4.push("b")>><</if>>
+<<if $_s4_c>><<run $_sel4.push("c")>><</if>>
+<<if $_s4_d>><<run $_sel4.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['c']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel4.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel4>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F4">>
+<</button>>
+
+
+:: Q5 {"position":"1150,25","size":"100,100"}
+Which post-translational modification commonly alters enzyme activity by addition of a phosphate group?
+
+Select all that apply.
+<<set $_sel5 to []>>
+<<checkbox "$_s5_a" false true>> a) Ubiquitination<br>
+<<checkbox "$_s5_b" false true>> b) Phosphorylation<br>
+<<checkbox "$_s5_c" false true>> c) Glycosylation<br>
+<<checkbox "$_s5_d" false true>> d) Replication<br>
+
+<<button "Submit">>
+<<set $_sel5=[]>>
+<<if $_s5_a>><<run $_sel5.push("a")>><</if>>
+<<if $_s5_b>><<run $_sel5.push("b")>><</if>>
+<<if $_s5_c>><<run $_sel5.push("c")>><</if>>
+<<if $_s5_d>><<run $_sel5.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['b']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel5.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel5>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F5">>
+<</button>>
+
+
+:: Q6 {"position":"150,150","size":"100,100"}
+What is the primary role of the liver during short-term fasting (6–24 h)?
+
+Select all that apply.
+<<set $_sel6 to []>>
+<<checkbox "$_s6_a" false true>> a) Ketone production as the main fuel source<br>
+<<checkbox "$_s6_b" false true>> b) Cholesterol synthesis<br>
+<<checkbox "$_s6_c" false true>> c) Maintaining blood glucose levels<br>
+<<checkbox "$_s6_d" false true>> d) Fat storage<br>
+
+<<button "Submit">>
+<<set $_sel6=[]>>
+<<if $_s6_a>><<run $_sel6.push("a")>><</if>>
+<<if $_s6_b>><<run $_sel6.push("b")>><</if>>
+<<if $_s6_c>><<run $_sel6.push("c")>><</if>>
+<<if $_s6_d>><<run $_sel6.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['c']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel6.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel6>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F6">>
+<</button>>
+
+
+:: Q7 {"position":"400,150","size":"100,100"}
+Which molecule acts as a second messenger in the signalling cascade discussed in the lecture?
+
+Select all that apply.
+<<set $_sel7 to []>>
+<<checkbox "$_s7_a" false true>> a) Glycogen<br>
+<<checkbox "$_s7_b" false true>> b) DNA<br>
+<<checkbox "$_s7_c" false true>> c) ATP<br>
+<<checkbox "$_s7_d" false true>> d) cAMP<br>
+
+<<button "Submit">>
+<<set $_sel7=[]>>
+<<if $_s7_a>><<run $_sel7.push("a")>><</if>>
+<<if $_s7_b>><<run $_sel7.push("b")>><</if>>
+<<if $_s7_c>><<run $_sel7.push("c")>><</if>>
+<<if $_s7_d>><<run $_sel7.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['d']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel7.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel7>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F7">>
+<</button>>
+
+
+:: Q8 {"position":"650,150","size":"100,100"}
+In pre-diabetes, cells become less responsive to:
+
+Select all that apply.
+<<set $_sel8 to []>>
+<<checkbox "$_s8_a" false true>> a) Glucagon<br>
+<<checkbox "$_s8_b" false true>> b) Insulin<br>
+<<checkbox "$_s8_c" false true>> c) Lactate<br>
+<<checkbox "$_s8_d" false true>> d) Glycogen<br>
+
+<<button "Submit">>
+<<set $_sel8=[]>>
+<<if $_s8_a>><<run $_sel8.push("a")>><</if>>
+<<if $_s8_b>><<run $_sel8.push("b")>><</if>>
+<<if $_s8_c>><<run $_sel8.push("c")>><</if>>
+<<if $_s8_d>><<run $_sel8.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['b']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel8.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel8>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F8">>
+<</button>>
+
+
+:: Q9 {"position":"900,150","size":"100,100"}
+ATP acts as an allosteric inhibitor of Complex IV because ATP is:
+
+Select all that apply.
+<<set $_sel9 to []>>
+<<checkbox "$_s9_a" false true>> a) An input to the pathway<br>
+<<checkbox "$_s9_b" false true>> b) A substrate for oxygen<br>
+<<checkbox "$_s9_c" false true>> c) The product of energy-generating metabolism<br>
+<<checkbox "$_s9_d" false true>> d) A membrane receptor<br>
+
+<<button "Submit">>
+<<set $_sel9=[]>>
+<<if $_s9_a>><<run $_sel9.push("a")>><</if>>
+<<if $_s9_b>><<run $_sel9.push("b")>><</if>>
+<<if $_s9_c>><<run $_sel9.push("c")>><</if>>
+<<if $_s9_d>><<run $_sel9.push("d")>><</if>>
+<<set $_correctCount=0>><<set $_missed=[]>><<set $_wrong=[]>><<set $_correctSet=['c']>><<set $_possibleThis=1>><<set $possible += 1>>
+<<for _a range $_correctSet>><<if $_sel9.includes(_a)>><<set $_correctCount +=1>><<else>><<run $_missed.push(_a)>><</if>><</for>>
+<<for _s range $_sel9>><<if !$_correctSet.includes(_s)>><<run $_wrong.push(_s)>><</if>><</for>>
+<<set $totalCorrect += $_correctCount>><<set $incorrect += $_wrong.length>>
+<<goto "F9">>
+<</button>>
+
+
+:: Start {"position":"25,25","size":"100,100"}
+<<set $totalCorrect=0>><<set $possible=0>><<set $incorrect=0>>
+Welcome to the quiz.
+
+[[Begin->Q1]]
+
+
+:: Summary {"position":"150,275","size":"100,100"}
+<<set $adjusted = $totalCorrect - (0.5 * $incorrect)>>
+<<if $adjusted < 0>><<set $adjusted = 0>><</if>>
+<<set $pct = Math.round(($adjusted / $possible) * 1000)/10>>
+Total correctly identified answers: <<= $totalCorrect>><br>
+Total possible correct answers: <<= $possible>><br>
+Penalty-adjusted marks: <<= $adjusted>><br>
+Overall percentage: <<= $pct>>%
